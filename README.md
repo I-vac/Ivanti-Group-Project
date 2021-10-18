@@ -1,5 +1,6 @@
 Setting up Mongo locally:
 - https://www.mongodb.com/products/compass
+- https://www.mongodb.com/try/download/community?tck=docs_server
 - mongodb://127.0.0.1
 - No credentials (unsafe)
 
