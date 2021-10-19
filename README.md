@@ -4,6 +4,18 @@ Setting up Mongo locally:
 - mongodb://127.0.0.1
 - No credentials (unsafe)
 
+running up frontend
+```
+- npm install -g @angular/cli
+- npm update
+- ng serve
+
+```
+
+
+
+
+
 Next step docker:
 ```
 version: "3.8"
