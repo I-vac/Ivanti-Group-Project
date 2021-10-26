@@ -13,8 +13,8 @@ running up frontend
 ```
 
 
-
-
+foo
+bar
 
 Next step docker:
 ```
