@@ -1,4 +1,20 @@
-<button (click)="getItems()">Api Call</button>
+<!-- <button (click)="getItems()">Api Call</button>
 <div *ngFor="let item of items | async">
   {{item | json}}
+</div> -->
+
+<header>
+  <div class="container">
+    <a routerLink="/" class="logo">CoolApp</a>
+    <nav>
+      <ul>
+        <li><a href="#" routerLink="/">Home</a></li>
+        <li><a href="#" routerLink="/market">List</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
