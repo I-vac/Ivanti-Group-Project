@@ -1,0 +1,24 @@
+<h1>Market place</h1>
+
+<div class="container">
+  <div class="news">
+  <div class="text">
+    <p>News</p>
+  </div>
+  </div>
+</div>
+
+    <ul *ngIf="packages">
+      <li *ngFor="let package of packages">
+        <mat-card class="example-card">
+          <mat-card-title-group>
+            <mat-card-title>{{ package.description }}</mat-card-title>
+            <mat-card-subtitle>{{ package.title }}</mat-card-subtitle>
+            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+          </mat-card-title-group>
+          <mat-card-content>
+            asdsadasd
+          </mat-card-content>
+        </mat-card>
+      </li>
+    </ul>
