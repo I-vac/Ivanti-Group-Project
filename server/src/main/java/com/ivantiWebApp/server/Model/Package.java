@@ -5,19 +5,24 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Package {
-
     @Id
     private String id;
+    private ContentCreator contentCreator;
     private String title;
     private String description;
-    private String installDescription;
-    private String version;
 
-    public Package(String title, String description, String installDescription, String version) {
+    public Package(ContentCreator contentCreator, String title, String description) {
+        this.contentCreator = contentCreator;
         this.title = title;
         this.description = description;
-        this.installDescription = installDescription;
-        this.version = version;
+    }
+
+    public ContentCreator getContentCreator() {
+        return contentCreator;
+    }
+
+    public void setContentCreator(ContentCreator contentCreator) {
+        this.contentCreator = contentCreator;
     }
 
     public String getTitle() {
@@ -34,21 +39,5 @@ public class Package {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getInstallDescription() {
-        return installDescription;
-    }
-
-    public void setInstallDescription(String installDescription) {
-        this.installDescription = installDescription;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
     }
 }
