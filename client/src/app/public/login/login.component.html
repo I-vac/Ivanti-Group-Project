@@ -1,0 +1,54 @@
+<!--<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">LOGO</a>
+    </div>
+  </div>
+</div>-->
+
+<div class="container" style="margin-top:150px;position:absolute;">
+
+  <div class="col-md-6 col-md-offset-3">
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" name="email" placeholder="email" [(ngModel)]="email.value" />
+        <div [hidden]="!email.errors.required">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="password" [(ngModel)]="password.value"/>
+        <div [hidden]="!password.errors.required">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="" [(ngModel)]="rememberMe">
+            Remember me
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12" style="margin-top:20px;">
+      <div class="form-group">
+        <button [disabled]="loading" (click)="seConnecter()" class="btn btn-primary btn-block">Login</button>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <a href="forgot-pw">Forgot password ?</a>
+    </div>
+
+  </div>
+</div>
