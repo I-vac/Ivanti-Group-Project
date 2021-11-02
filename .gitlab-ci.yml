@@ -1,3 +1,5 @@
+
+
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
@@ -6,10 +8,12 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script: 
-    - gradlew build -x test
+    - set GRADLE_HOME=C:\Users\usr\Desktop\java shits\gradle-6.9.1-all\gradle-6.9.1\
+    - set path= %GRADLE_HOME%\bin;%path%
+    - ./gradlew build -x test
 
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
   script:
-    - gradlew test
+    - ./gradlew test
