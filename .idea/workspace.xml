@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="787919ac-c328-4e75-ae0b-fd362c12a3ba" name="Changes" comment="Fucking Shit commited !">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/home-page/home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home-page/home-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/market-place/market-place.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/market-place/market-place.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635934571311</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fucking Shit commited !">
+      <created>1635937923004</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1635937923005</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
