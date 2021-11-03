@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 
@@ -9,8 +10,19 @@ import { HttpService } from '../http.service';
 export class MarketPlaceComponent implements OnInit {
 
   packages: Object;
+  search: Object;
 
   constructor(private _http: HttpService) { }
+
+  onSearchChange(searchValue: string): void {  
+    console.log(searchValue);
+  }
+
+  showSearch(search) {
+    this._http.searchBar(search).subscribe(data => {
+      this.search = data;
+    })
+  }
 
   ngOnInit() {
     this._http.getPackages().subscribe(data => {
