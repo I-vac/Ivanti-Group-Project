@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MarketPlaceComponent } from './market-place/market-place.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { LoginComponent } from './public/login/login.component';
-import { RegisterComponent } from './public/register/register.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [

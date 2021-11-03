@@ -11,12 +11,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     MarketPlaceComponent,
     HomePageComponent,
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
