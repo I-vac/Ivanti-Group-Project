@@ -8,8 +8,6 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script: 
-    - set GRADLE_HOME=C:\Users\usr\Desktop\java shits\gradle-6.9.1-all\gradle-6.9.1\
-    - set path= %GRADLE_HOME%\bin;%path%
     - ./gradlew build -x test
 
 
