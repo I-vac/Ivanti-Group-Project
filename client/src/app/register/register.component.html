@@ -2,7 +2,7 @@
   <div class="pull-right">
     Already a member ?
   </div>
-  <a [routerLink]="['/login']" class="btn btn-info" style="margin-left:0px">Sign In</a>
+  <!--<a [routerLink]="['/login']" class="btn btn-info" style="margin-left:0px">Sign In</a> -->
   <div>
   </div>
 </div>
@@ -16,11 +16,11 @@
         <label>You are</label>
         <div class="radio">
           <label>
-            <input type="radio" name="genre" value="contentcreator" [(ngModel)]="role">
+            <input type="radio" name="genre" value="contentcreator" ><!--[(ngModel)]="role"-->
             Content Creator
           </label>
           <label style="margin-left:20px">
-            <input type="radio" name="genre" value="user"[(ngModel)]="role">
+            <input type="radio" name="genre" value="user" ><!--[(ngModel)]="role"-->
             User
           </label>
         </div>
@@ -31,52 +31,52 @@
       <div class="form-group">
         <label >First Name</label>
         <input type="text" class="form-control" name="firstname" placeholder="First name" /><!--[(ngModel)]="firstname.value"-->
-        <div [hidden]="!firstname.errors.required">
+        <!--<div [hidden]="!firstname.errors.required">
 
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label >Last Name</label>
         <input type="text" class="form-control" name="lastname" placeholder="Last name" /><!--[(ngModel)]="lastname.value"-->
-        <div [hidden]="!lastname.errors.required">
+        <!--<div [hidden]="!lastname.errors.required">
 
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="col-md-12">
       <div class="form-group">
         <label >Email</label>
         <input type="text" class="form-control" name="email" placeholder="Email" /><!--[(ngModel)]="email.value"-->
-        <div [hidden]="!email.errors.required">
+        <!--<div [hidden]="!email.errors.required">
 
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="col-md-12">
       <div class="form-group">
         <label >Password</label>
         <input type="password" class="form-control" name="password" placeholder="Password" /><!--[(ngModel)]="password.value"-->
-        <div [hidden]="!password.errors.required">
+        <!--<div [hidden]="!password.errors.required">
 
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="col-md-12">
       <div class="form-group">
         <label >Confirm Password</label>
         <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm password" /><!--[(ngModel)]="confirmpassword.value"-->
-        <div [hidden]="!confirmpassword.errors.required">
+        <!--<div [hidden]="!confirmpassword.errors.required">
 
-        </div>
+        </div>-->
       </div>
     </div>
 
 
     <div class="col-md-12" style="margin-top:20px;">
       <div class="form-group">
-        <button [disabled]="loading" (click)="registeration()" class="btn btn-primary btn-block">Sign Up</button>
+        <button class="btn btn-primary btn-block">Sign Up</button>
       </div>
     </div>
 

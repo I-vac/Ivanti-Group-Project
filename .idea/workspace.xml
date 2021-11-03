@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="787919ac-c328-4e75-ae0b-fd362c12a3ba" name="Changes" comment="Arpit commited !">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/home-page/home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home-page/home-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/marketPlace/market-place.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/register/register.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635931400184</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Arpit commited !">
+      <created>1635932157930</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635932157931</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
