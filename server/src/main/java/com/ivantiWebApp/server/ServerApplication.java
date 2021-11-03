@@ -38,10 +38,10 @@ public class ServerApplication {
 			Package package1 = new Package(cc1, "NuGet package", "MyFirstPackage");
 			Package package2 = new Package(cc1, "Go package", "MySecondPackage");
 
-//			userRepo.insert(user1);
-//			contentRepo.insert(cc1);
-//			packageRepo.insert(package1);
-//			packageRepo.insert(package2);
+			userRepo.insert(user1);
+			contentRepo.insert(cc1);
+			packageRepo.insert(package1);
+			packageRepo.insert(package2);
 		};
 	}
 

@@ -1,4 +1,4 @@
-<h1>Market place</h1>
+<h1 class="heade">Market place</h1>
 
 <div class="container">
   <div class="news">
@@ -8,17 +8,38 @@
   </div>
 </div>
 
+<div>
+<h1 class="header2">Popular packages</h1>
+<div class="containerPP">
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+</div>
+</div>
+
     <ul *ngIf="packages">
       <li *ngFor="let package of packages">
-        <mat-card class="example-card">
-          <mat-card-title-group>
-            <mat-card-title>{{ package.description }}</mat-card-title>
-            <mat-card-subtitle>{{ package.title }}</mat-card-subtitle>
-            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-          </mat-card-title-group>
-          <mat-card-content>
-            asdsadasd
-          </mat-card-content>
-        </mat-card>
+        <a class="card2" href="#">
+          <h2> {{package.title}} </h2>
+          <h3>OS 30</h3>
+          <p class="small">{{ package.description }}</p>
+        </a>
       </li>
     </ul>

@@ -9,7 +9,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   getPackages() {
-    return this.http.get('http://localhost:8080/package/s')
+    return this.http.get('http://localhost:8080/api/packages/all')
   }
 }
 
