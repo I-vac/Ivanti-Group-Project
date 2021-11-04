@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 @import 'material-icons/iconfont/material-icons.scss';
 
-$primary: rgb(111, 0, 255);
+$primary: rgb(0, 0, 0);
 
 html, body { height: 100%; }
 
@@ -16,19 +16,21 @@ body {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 header {
-    background: $primary;
+    background: black;
     padding: 1em 0;
 
     a {
         color: white;
         text-decoration: none;
     }
-    a.logo {
+    img.logo {
         font-weight: bold;
+        height: 54px;
+
     }
 
     nav {
@@ -41,10 +43,7 @@ header {
 
             li a {
                 padding: 1em;
-
-                &:hover {
-                    background: darken($primary, 10%);
-                }
+                font-size: 20px;
             }
         }
     }
