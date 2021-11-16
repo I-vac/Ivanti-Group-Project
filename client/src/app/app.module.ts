@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
@@ -33,6 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatGridListModule,
+    MatFormFieldModule,
+    MatSelectModule,
     NgbModule
   ],
   providers: [],

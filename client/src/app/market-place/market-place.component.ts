@@ -14,7 +14,7 @@ export class MarketPlaceComponent implements OnInit {
 
   constructor(private _http: HttpService) { }
 
-  onSearchChange(searchValue: string): void {  
+  onSearchChange(searchValue: string): void {
     console.log(searchValue);
   }
 
@@ -23,6 +23,8 @@ export class MarketPlaceComponent implements OnInit {
       this.search = data;
     })
   }
+
+
 
   ngOnInit() {
     this._http.getPackages().subscribe(data => {

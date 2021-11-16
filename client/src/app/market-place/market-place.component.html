@@ -44,9 +44,23 @@
         <p class="small">{{ search.description }}</p>
       </a>
     </li>
+
+
   </ul>
+
+
 </div>
 
+
+  <mat-form-field appearance="fill">
+    <mat-label>Categories</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-option value="windows">Windows</mat-option>
+      <mat-option value="android">Android</mat-option>
+      <mat-option value="frontend">Frontend</mat-option>
+    </mat-select>
+  </mat-form-field>
     <!-- <ul *ngIf="packages">
       <li *ngFor="let package of packages">
         <a class="card2" href="#">
