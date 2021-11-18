@@ -24,6 +24,10 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//to convert the InputStream into a byte array
+	implementation 'commons-io:commons-io:2.6'
+
 }
 
 test {
