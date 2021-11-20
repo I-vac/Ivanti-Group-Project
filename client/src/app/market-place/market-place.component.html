@@ -1,0 +1,73 @@
+<h1 class="heade">Market place</h1>
+
+<div class="container" align="center">
+  <div class="news">
+  <div class="text">
+    <p>News</p>
+  </div>
+  </div>
+</div>
+
+<div>
+<h1 class="header2">Popular packages</h1>
+
+<div class="containerpp" allign="center">
+
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+      <a class="card2" href="#">
+        <h2>Ivanti Package</h2>
+        <h3>OS 30</h3>
+        <p class="small">Card description with lots of great facts and interesting details.</p>
+      </a>
+      </div>
+      <input type="text" class="form-control" (input)="showSearch($event.target.value)" placeholder="Search package...">
+<div class="containerPP">
+  <ul *ngIf="packages">
+    <li *ngFor="let search of search">
+      <a class="card2" href="#">
+        <h2> {{search.title}} </h2>
+        <h3>OS 30</h3>
+        <p class="small">{{ search.description }}</p>
+      </a>
+    </li>
+
+
+  </ul>
+
+
+</div>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Categories</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-option value="windows">Windows</mat-option>
+      <mat-option value="android">Android</mat-option>
+      <mat-option value="frontend">Frontend</mat-option>
+    </mat-select>
+  </mat-form-field>
+    <!-- <ul *ngIf="packages">
+      <li *ngFor="let package of packages">
+        <a class="card2" href="#">
+          <h2> {{package.title}} </h2>
+          <h3>OS 30</h3>
+          <p class="small">{{ package.description }}</p>
+        </a>
+      </li>
+    </ul> -->
+</div>
