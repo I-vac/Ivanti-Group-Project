@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'client';
   readonly ROOT_URL = 'http://127.0.0.1:8080/api';
   items: any;
-  constructor(private http: HttpClient, private translationService: TranslationService) {}
+  constructor(private http: HttpClient, public translationService: TranslationService) {}
 
   getItems() {
     this.items = this.http.get(this.ROOT_URL + '/items');
