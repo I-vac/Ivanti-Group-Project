@@ -24,4 +24,11 @@ public class ItemController {
 
         return ResponseEntity.ok().body(items);
     }
+
+    @CrossOrigin
+    @PostMapping("/add")
+    public ResponseEntity<Item> addItem(@RequestBody Item item){
+        Item item1 = repository.save(item);
+        return ResponseEntity.ok().body(item);
+    }
 }
