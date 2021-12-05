@@ -20,6 +20,7 @@ import {MatSelectModule} from '@angular/material/select';
 
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TranslationService } from './translation.service';
     LoginComponent,
     RegisterComponent,
     FooterComponent,
-    TranslatePipe
+    TranslatePipe,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,

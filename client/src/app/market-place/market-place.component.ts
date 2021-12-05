@@ -9,28 +9,26 @@ import { HttpService } from '../http.service';
 })
 export class MarketPlaceComponent implements OnInit {
 
-  packages: Object;
-  search: Object;
+    packages: Object;
+    search: Object;
 
-  constructor(private _http: HttpService) { }
+    constructor(private _http: HttpService) { }
 
-  onSearchChange(searchValue: string): void {
-    console.log(searchValue);
+    onSearchChange(searchValue: string): void {
+      console.log(searchValue);
+    }
+
+    showSearch(search) {
+      this._http.searchBar(search).subscribe(data => {
+        this.search = data;
+      })
+    }
+
+    ngOnInit() {
+      this._http.getPackages().subscribe(data => {
+        this.packages = data
+        console.log(this.packages);
+    });
   }
-
-  showSearch(search) {
-    this._http.searchBar(search).subscribe(data => {
-      this.search = data;
-    })
-  }
-
-
-
-  ngOnInit() {
-    this._http.getPackages().subscribe(data => {
-      this.packages = data
-      console.log(this.packages);
-  });
-}
 
 }

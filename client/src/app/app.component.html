@@ -12,6 +12,7 @@
         <li><a href="#" routerLink="/market">{{'list' | translate}}</a></li>
         <li><a href="#" routerLink="/register">{{'register' | translate}}</a></li>
         <li><a href="#" routerLink="/login">{{'login' | translate}}</a></li>
+        <li><a href="#" routerLink="/profile">{{'profile' | translate}}</a></li>
         <li>
           <select [(ngModel)]="translationService.language">
             <option *ngFor="let language of translationService.languages" [ngValue]="language">{{language}}</option>
