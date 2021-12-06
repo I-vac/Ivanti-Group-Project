@@ -28,6 +28,13 @@ dependencies {
 	//to convert the InputStream into a byte array
 	implementation 'commons-io:commons-io:2.6'
 
+	// JWT authentication dependencies
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	// Fix for log-in
+	implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+	implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+
 }
 
 test {
