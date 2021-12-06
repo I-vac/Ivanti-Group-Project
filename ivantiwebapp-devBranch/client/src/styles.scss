@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@import 'material-icons/iconfont/material-icons.scss';
+
+$primary: rgb(0, 0, 0);
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Oswald, "Oswald", sans-serif; }
+
+body {
+    margin: 0;
+    font-family: 'Oswald', 'sans-serif';
+    font-size: 18px;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+header {
+    background: black;
+    padding: 1em 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    img.logo {
+        font-weight: bold;
+        height: 54px;
+
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+
+            li a {
+                padding: 1em;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
