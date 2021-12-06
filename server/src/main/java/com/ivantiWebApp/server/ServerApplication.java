@@ -3,6 +3,8 @@ package com.ivantiWebApp.server;
 import com.ivantiWebApp.server.Model.*;
 import com.ivantiWebApp.server.Model.Package;
 import com.ivantiWebApp.server.Repository.*;
+import org.apache.tomcat.jni.Local;
+import org.bson.codecs.jsr310.LocalDateTimeCodec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +27,7 @@ public class ServerApplication {
 	}
 
 	@Bean
-	CommandLineRunner init(RoleRepository roleRepository) {
+	CommandLineRunner init(RoleRepository roleRepository, UserRepository userRepository, ContentCreatorRepository contentCreatorRepository, PackageRepository packageRepository, CategoryRepository categoryRepository) {
 
 		return args -> {
 
@@ -34,6 +37,19 @@ public class ServerApplication {
 				newAdminRole.setRole("ADMIN");
 				roleRepository.save(newAdminRole);
 			}
+
+			/*LocalDateTime date = LocalDateTime.now();
+			User user = new User("Ivaylo", "Nikolov", "ivaylonikolov@ivanti.nl", "balkan", date);
+
+			ContentCreator contentCreator = new ContentCreator(user, "Microsoft", "Developer");
+			Package packageIvanti = new Package(contentCreator, "Speed Test", "Test your connection/network speed");
+
+			userRepository.save(user);
+			contentCreatorRepository.save(contentCreator);
+			packageRepository.save(packageIvanti);*/
+
+			//Category category = new Category();
+
 		};
 
 	}

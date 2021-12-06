@@ -16,7 +16,7 @@ import java.io.IOException;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/file")
+@RequestMapping("/files")
 public class FileController {
 
     @Autowired

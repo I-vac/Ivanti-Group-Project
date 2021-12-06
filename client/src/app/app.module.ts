@@ -20,9 +20,7 @@ import {MatSelectModule} from '@angular/material/select';
 
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
-
-
-import { UploadDownloadComponent } from './upload-download/upload-download.component';
+import { SecurityComponent } from './security/security.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +30,8 @@ import { UploadDownloadComponent } from './upload-download/upload-download.compo
     LoginComponent,
     RegisterComponent,
     FooterComponent,
-    UploadDownloadComponent
+    TranslatePipe,
+    SecurityComponent
   ],
   imports: [
     BrowserModule,
