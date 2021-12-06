@@ -21,6 +21,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
 
+
+import { UploadDownloadComponent } from './upload-download/upload-download.component';
+
 @NgModule({
   declarations: [
     MarketPlaceComponent,
@@ -29,7 +32,7 @@ import { TranslationService } from './translation.service';
     LoginComponent,
     RegisterComponent,
     FooterComponent,
-    TranslatePipe
+    UploadDownloadComponent
   ],
   imports: [
     BrowserModule,
