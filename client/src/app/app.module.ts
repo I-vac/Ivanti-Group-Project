@@ -16,6 +16,17 @@ import {MatSelectModule} from '@angular/material/select';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
+<<<<<<< Updated upstream
+=======
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
+
+import { TranslatePipe } from './translate.pipe';
+import { TranslationService } from './translation.service';
+import { RegisterComponentComponent } from './register-component/register-component.component';
+import { UploadDownloadComponent } from './upload-download/upload-download.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -24,7 +35,13 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
+<<<<<<< Updated upstream
     FooterComponent
+=======
+    FooterComponent,
+    TranslatePipe,
+    UploadDownloadComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
