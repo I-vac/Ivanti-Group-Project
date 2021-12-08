@@ -7,7 +7,7 @@
 </div>-->
 
 <div class="container" style="margin-top:150px;margin-left:250px;position:absolute;">
- 
+
   <div class="col-md-6 col-md-offset-3">
     <h1>
       {{'login' | translate}}
@@ -15,7 +15,7 @@
     <div class="col-md-12">
       <div class="form-group" align="center">
         <label><b>Email</b></label>
-        <input type="text" class="form-control" name="email" placeholder="Email address" /><!--[(ngModel)]="email.value"-->
+        <input id="email" type="text" class="form-control" name="email" placeholder="Email address" /><!--[(ngModel)]="email.value"-->
 
 
 
@@ -24,7 +24,7 @@
     <div class="col-md-12">
       <div class="form-group" align="center">
         <label><b>Password</b></label>
-        <input type="password" class="form-control" name="password" placeholder="Password"/> <!--[(ngModel)]="password.value"-->
+        <input id="password" type="password" class="form-control" name="password" placeholder="Password"/> <!--[(ngModel)]="password.value"-->
 
 
 
@@ -44,7 +44,8 @@
 
     <div class="col-md-12" style="margin-top:20px;">
       <div class="form-group">
-        <button class="btn btn-primary btn-block">Login</button>
+        <button (click)="login()" class="btn btn-primary btn-block">Login</button>
+
       </div>
     </div>
 

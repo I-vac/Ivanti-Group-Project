@@ -9,26 +9,49 @@ import { HttpService } from '../http.service';
 })
 export class MarketPlaceComponent implements OnInit {
 
-    packages: Object;
-    search: Object;
+  packages: Object;
+  search: Object;
+  category: Object;
+  packagebycategory: Object;
 
-    constructor(private _http: HttpService) { }
+  constructor(private _http: HttpService) { }
 
-    onSearchChange(searchValue: string): void {
-      console.log(searchValue);
+  onSearchChange(searchValue: string): void {
+    console.log(searchValue);
+  }
+
+  showSearch(search) {
+    this._http.searchBar(search).subscribe(data => {
+      this.search = data;
+    })
+  }
+
+  convertToJSON(item: any) {
+      return JSON.parse(item);
     }
 
-    showSearch(search) {
-      this._http.searchBar(search).subscribe(data => {
-        this.search = data;
+  showCategory() {
+      this._http.getAllCategories().subscribe(data => {
+        this.category = data;
       })
     }
 
-    ngOnInit() {
-      this._http.getPackages().subscribe(data => {
-        this.packages = data
-        console.log(this.packages);
-    });
-  }
+
+  showPackageByCategory(category) {
+        this._http.getPackagesByCategory(category).subscribe(data => {
+          this.packagebycategory = data;
+        })
+      }
+
+
+  ngOnInit() {
+  this.showCategory();
+
+    this._http.getPackages().subscribe(data => {
+      this.packages = data
+      console.log(this.packages);
+  });
+
+}
 
 }

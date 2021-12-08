@@ -20,4 +20,11 @@ public class PackageImplementation {
         List<PackageDTO> result = mongoTemplate.find(query, PackageDTO.class);
         return result;
     }
+
+    public List<PackageDTO> findByCategory() {
+        Query query = new Query()
+                .addCriteria(Criteria.where("category.name").is("Windows"));
+        List<PackageDTO> result = mongoTemplate.find(query, PackageDTO.class);
+        return result;
+    }
 }
