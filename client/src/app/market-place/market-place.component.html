@@ -35,56 +35,69 @@
       </a>
       </div>
       <input type="text" class="form-control" (input)="showSearch($event.target.value)" placeholder="Search package...">
-<div class="containerPP">
-  <ul *ngIf="packages">
-    <li *ngFor="let search of convertToJSON(search)">
-      <a class="card2" href="#">
-        <h2> {{search.title}} </h2>
-        <h3>OS 30</h3>
-        <p class="small">{{ search.description }}</p>
-      </a>
-    </li>
 
 
-  </ul>
-
-
-</div>
-
-    <mat-label>Categories</mat-label>
+  <div class="containerPP">
+    <ul *ngIf="packages">
+      <li *ngFor="let search of convertToJSON(search)">
+        <a class="card2" href="#">
+          <h2> {{search.title}} </h2>
+          <h3>OS 30</h3>
+          <p class="small">{{ search.description }}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <button (click)="sortClick()">Sort</button>
+    <!--<mat-label>Categories</mat-label>
       <mat-select name="selectCategory" #packageByCategory (selectionChange)="showPackageByCategory($event.value)">
-        <mat-option value="default">----</mat-option>
+        <mat-option value="default">---Select---</mat-option>
         <ul *ngIf="packages">
           <mat-option *ngFor="let category of convertToJSON(category)" [value]="category">
             {{category}}
-            <!--<a class="card2" href="#">
+            <a class="card2" href="#">
               <h2> {{package.title}} </h2>
               <h3>OS 30</h3>
               <p class="small">{{ package.description }}</p>
-            </a>-->
+            </a>
           </mat-option>
 
         </ul>
+      </mat-select>-->
+
+
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Categories</mat-label>
+      <mat-select [formControl]="categories" multiple name="selectCategory" #packageByCategory (selectionChange)="showPackageByCategory($event.value)">
+        <mat-select-trigger>
+          {{categories.value ? categories.value[0] : ''}}
+          <span *ngIf="categories.value?.length > 1" style="opacity: 0.75;font-size: 0.75em;">
+          (+{{categories.value.length - 1}} {{categories.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let category of convertToJSON(category)" [value]="category">{{category}}</mat-option>
       </mat-select>
+    </mat-form-field>
 
 
 
-
-  <mat-form-field appearance="fill">
+  <!--<mat-form-field appearance="fill">
     <mat-label>Categories</mat-label>
     <mat-select>
       <mat-option>None</mat-option>
-      <!--<mat-option value="windows">Windows</mat-option>
+      <mat-option value="windows">Windows</mat-option>
       <mat-option value="android">Android</mat-option>
       <mat-option value="frontend">Frontend</mat-option>
       <ul *ngIf="packages">
 
-      </ul>-->
+      </ul>
       <mat-option *ngFor = "let category of convertToJSON(category)" [value]="category"></mat-option>
       {{category}}
     </mat-select>
 
-  </mat-form-field>
+  </mat-form-field>-->
     <!-- <ul *ngIf="packages">
       <li *ngFor="let package of packages">
         <a class="card2" href="#">

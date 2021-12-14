@@ -78,7 +78,6 @@ public class PackageController {
     public ResponseEntity<List<String>> getAllCategories() {
         List<String> names = mongoTemplate.query(Category.class).distinct("name").as(String.class).all();
 
-        System.out.println(names);
         return ResponseEntity.ok().body(names);
 
         //List<Category> categories = mongoOperations.findAll(Category.class);
