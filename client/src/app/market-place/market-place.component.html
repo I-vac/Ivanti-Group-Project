@@ -44,6 +44,7 @@
       </a>
     </li>
   </ul>
+  <button (click)="sortClick()">Sort</button>
 </div>
 
     <mat-label>Categories</mat-label>
@@ -89,4 +90,21 @@
         </a>
       </li>
     </ul> -->
+
+    <mat-form-field appearance="fill">
+      <mat-label>Categories</mat-label>
+      <mat-select [formControl]="categories" multiple name="selectCategory" #packageByCategory (selectionChange)="showPackageByCategory($event.value)">
+        <mat-select-trigger>
+          {{categories.value ? categories.value[0] : ''}}
+          <span *ngIf="categories.value?.length > 1" style="opacity: 0.75;font-size: 0.75em;">
+          (+{{categories.value.length - 1}} {{categories.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let category of convertToJSON(category)" [value]="category">{{category}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+
+
 </div>
