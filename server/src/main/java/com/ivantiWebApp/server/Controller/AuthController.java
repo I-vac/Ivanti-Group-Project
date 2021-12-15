@@ -1,6 +1,7 @@
 package com.ivantiWebApp.server.Controller;
 
 import com.ivantiWebApp.server.Config.JwtTokenProvider;
+import com.ivantiWebApp.server.DTO.AuthDTO;
 import com.ivantiWebApp.server.Model.User;
 import com.ivantiWebApp.server.Repository.UserRepository;
 import com.ivantiWebApp.server.Service.CustomUserDetailsService;
@@ -9,10 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
 
 import javax.naming.AuthenticationException;
 import java.util.HashMap;
@@ -21,6 +20,7 @@ import java.util.Map;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/api/auth")
 public class AuthController {
 
@@ -53,7 +53,7 @@ public class AuthController {
         }
     }
 
-    @SuppressWarnings("rawtypes")
+
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody User user) {
         User userExists = userService.findUserByEmail(user.getEmail());
@@ -65,4 +65,5 @@ public class AuthController {
         model.put("message", "User registered successfully");
         return ok(model);
     }
+
 }
