@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
@@ -46,8 +47,8 @@ import { SecurityComponent } from './security/security.component';
     MatGridListModule,
     MatFormFieldModule,
     MatSelectModule,
-
     NgbModule,
+    MDBBootstrapModule.forRoot()
 
   ],
   providers: [TranslationService],
