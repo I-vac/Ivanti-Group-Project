@@ -12,7 +12,7 @@ export class HttpService {
 
   currentUser: any;
 
- prepareRequest(token){
+  prepareRequest(token){
     var headers;
     let tokenString = 'Bearer ' + token;
     return headers = new HttpHeaders().set("Authorization", tokenString)
@@ -32,7 +32,7 @@ export class HttpService {
       let headers = this.prepareRequest(localStorage.getItem("token"));
       return this.http.get(this.API_URL + '/users/getuser', {headers});
   }
-  
+
 
 
   searchBar(search) {
@@ -46,6 +46,19 @@ export class HttpService {
   getAllCategories(){
     //let headers = this.prepareRequest(localStorage.getItem("token"));
     return this.http.get(this.API_URL + '/packages/category/all',{ responseType: 'Text' as 'json'})
+  }
+
+  createItem() {
+    var postId;
+    this.http.post<any>(this.API_URL +'/ items', { title: 'Angular POST Request Example', description:'asdasd' }).subscribe(data => {
+        postId = data.id;
+    })
+  }
+
+  createPackage(pack) {
+    var postId
+    this.http.post<any>(this.API_URL+ '/packages/create', pack).subscribe(data => { postId =data.id})
+
   }
 
 }

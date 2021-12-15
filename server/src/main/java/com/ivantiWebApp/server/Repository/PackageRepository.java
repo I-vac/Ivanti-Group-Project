@@ -25,4 +25,6 @@ public interface PackageRepository extends MongoRepository<Package, String> {
     @Query(value = "{'title': {$alphabet : ?0, $options: 'i'}}")
     List<PackageDTO> findByAlphabet(String alphabetString);
 
+//    @Query(value = "Select package")
+//    List<PackageDTO> getPackageperu(String)
 }

@@ -85,15 +85,14 @@ export class MarketPlaceComponent implements OnInit {
         })
       }
 
-
   ngOnInit() {
   this.showCategory();
+  this._http.createItem();
 
     this._http.getPackages().subscribe(data => {
       this.packages = data
       console.log(this.packages);
   });
-
 }
 
 }

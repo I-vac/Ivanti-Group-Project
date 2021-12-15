@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
       email: email,
       password: password
     }
+
     this.service.getJwtToken(authBody);
     //window.location.href = "/market";
   }
