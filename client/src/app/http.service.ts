@@ -10,6 +10,8 @@ export class HttpService {
 
   readonly API_URL = 'http://localhost:8080/api'
 
+  currentUser: any;
+
  prepareRequest(token){
     var headers;
     let tokenString = 'Bearer ' + token;
@@ -25,6 +27,12 @@ export class HttpService {
       //let headers = this.prepareRequest(localStorage.getItem("token"));
       return this.http.get(this.API_URL + '/packages/bycategory?category=' + category,{responseType: 'Text' as 'json'})
     }
+
+  getUser(){
+      let headers = this.prepareRequest(localStorage.getItem("token"));
+      return this.http.get(this.API_URL + '/users/getuser', {headers});
+  }
+  
 
 
   searchBar(search) {

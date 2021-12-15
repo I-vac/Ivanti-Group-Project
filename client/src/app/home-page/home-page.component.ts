@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon'
 import { TranslationService } from '../translation.service';
+import { HttpService } from '../http.service';
 
 
 @Component({
@@ -11,9 +12,20 @@ import { TranslationService } from '../translation.service';
 
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _http: HttpService) { }
+
+  currentUser: any;
+
+  getCurrentUser() {
+    this._http.getUser()
+    .subscribe(data => {
+      this.currentUser = data;
+    });
+  }
+  
 
   ngOnInit(): void {
+    this.getCurrentUser();
   }
 
 }
