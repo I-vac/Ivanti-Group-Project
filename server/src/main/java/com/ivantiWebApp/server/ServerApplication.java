@@ -38,7 +38,7 @@ public class ServerApplication {
 				roleRepository.save(newAdminRole);
 			}
 
-			/*LocalDateTime date = LocalDateTime.now();
+			LocalDateTime date = LocalDateTime.now();
 			User user = new User("Ahmed", "Alharthy", "ahmedalharthy@ivanti.nl", "camel", date);
 
 			ContentCreator contentCreator = new ContentCreator(user, "Ubisoft", "IT Analyst");
@@ -48,7 +48,7 @@ public class ServerApplication {
 			userRepository.save(user);
 			categoryRepository.save(category);
 			contentCreatorRepository.save(contentCreator);
-			packageRepository.save(packageIvanti);*/
+			packageRepository.save(packageIvanti);
 
 		};
 

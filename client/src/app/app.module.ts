@@ -16,10 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
 import { SecurityComponent } from './security/security.component';
@@ -51,7 +49,6 @@ import { SecurityComponent } from './security/security.component';
     MatSelectModule,
     ReactiveFormsModule,
     NgbModule,
-    MDBBootstrapModule.forRoot()
 
   ],
   providers: [TranslationService],
