@@ -11,7 +11,7 @@ export class TranslationService {
 
     public languages = ['ger', 'eng'];
 
-    public language = 'ger';
+    public language = 'eng';
 
     private dictionary: {[key: string]: TranslationSet} = {
         'ger' : {

@@ -22,4 +22,7 @@ public interface PackageRepository extends MongoRepository<Package, String> {
     @Query(value = "{'title': {$regex : ?0, $options: 'i'}}")
     List<PackageDTO> findByRegex(String regexString);
 
+    @Query(value = "{'title': {$alphabet : ?0, $options: 'i'}}")
+    List<PackageDTO> findByAlphabet(String alphabetString);
+
 }

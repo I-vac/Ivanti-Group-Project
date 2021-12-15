@@ -39,16 +39,16 @@ public class ServerApplication {
 			}
 
 			/*LocalDateTime date = LocalDateTime.now();
-			User user = new User("Ivaylo", "Nikolov", "ivaylonikolov@ivanti.nl", "balkan", date);
+			User user = new User("Ahmed", "Alharthy", "ahmedalharthy@ivanti.nl", "camel", date);
 
-			ContentCreator contentCreator = new ContentCreator(user, "Microsoft", "Developer");
-			Package packageIvanti = new Package(contentCreator, "Speed Test", "Test your connection/network speed");
+			ContentCreator contentCreator = new ContentCreator(user, "Ubisoft", "IT Analyst");
+			Category category = new Category("sye4623hkgozgdb5h2", "Android");
+			Package packageIvanti = new Package(contentCreator, "Anabonda", "Snake analyzer", category);
 
 			userRepository.save(user);
+			categoryRepository.save(category);
 			contentCreatorRepository.save(contentCreator);
 			packageRepository.save(packageIvanti);*/
-
-			//Category category = new Category();
 
 		};
 

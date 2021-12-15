@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { MarketPlaceComponent } from './market-place/market-place.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
@@ -16,7 +16,8 @@ import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatButtonModule} from '@angular/material/button';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
@@ -38,14 +39,16 @@ import { SecurityComponent } from './security/security.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    MatButtonModule,
     RouterModule,
     BrowserAnimationsModule,
     MatCardModule,
+    ReactiveFormsModule,
     MatGridListModule,
     MatFormFieldModule,
     MatSelectModule,
-
     NgbModule,
+    MDBBootstrapModule.forRoot()
 
   ],
   providers: [TranslationService],
