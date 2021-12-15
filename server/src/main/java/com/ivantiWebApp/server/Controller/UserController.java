@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     UserRepository users;
 
-    @RequestMapping("/getuser")
+    @RequestMapping("/getCurrentUser")
     public ResponseEntity<AuthDTO> getUser(Authentication authentication) {
         System.out.println(authentication.getName());
         AuthDTO out = users.getCurrentuser(authentication.getName());

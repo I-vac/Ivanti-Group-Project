@@ -22,7 +22,8 @@ export class HomePageComponent implements OnInit {
       this.currentUser = data;
     });
   }
-  
+
+
 
   ngOnInit(): void {
     this.getCurrentUser();

@@ -30,7 +30,7 @@ export class HttpService {
 
   getUser(){
       let headers = this.prepareRequest(localStorage.getItem("token"));
-      return this.http.get(this.API_URL + '/users/getuser', {headers});
+      return this.http.get(this.API_URL + '/users/getCurrentUser', {headers});
   }
 
 

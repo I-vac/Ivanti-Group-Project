@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { MarketPlaceComponent } from './market-place/market-place.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
