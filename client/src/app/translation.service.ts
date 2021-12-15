@@ -21,7 +21,8 @@ export class TranslationService {
                 'home' : 'Heim',
                 'list' : 'Aufführen' ,
                 'register' : 'Registrieren',
-                'login' : 'Anmeldung'
+                'login' : 'Anmeldung',
+                'profile' : 'Profil'
             }
         },
         'eng' : {
@@ -31,7 +32,7 @@ export class TranslationService {
                 'home' : 'Home',
                 'list' : 'List' ,
                 'register' : 'Register',
-                'login' : 'Login'
+                'profile' : 'Profile'
             }
         }
     };
