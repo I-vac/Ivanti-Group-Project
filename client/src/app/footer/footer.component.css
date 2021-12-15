@@ -14,8 +14,9 @@
     font-size: 9vw;
   }
   #footer {
-    z-index: 5;
-    width: 100%;
+    position:fixed;
+        bottom:0px;
+        width:100%;
 
   }
 
@@ -30,16 +31,18 @@
     font-size: 3vw;
   }
   #footer {
-    z-index: 5;
-    width: 100%;
+    position:fixed;
+        bottom:0px;
+        width:100%;
 
   }
 
 }
 
 #footer {
-  z-index: 5;
-  width: 100%;
+  position:fixed;
+      bottom:0px;
+      width:100%;
 
 }
 
