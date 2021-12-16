@@ -23,6 +23,13 @@ export class HttpService {
     return this.http.get(this.API_URL + '/packages/all',{responseType: 'Text' as 'json'})
   }
 
+  makeCreator(body) {
+    let headers = this.prepareRequest(localStorage.getItem("token"));
+    return this.http.post<any>(this.API_URL + '/content', body,{headers}).subscribe(data => {
+      console.log(data)
+  })
+  }
+
   getPackagesByCategory(category) {
       //let headers = this.prepareRequest(localStorage.getItem("token"));
       return this.http.get(this.API_URL + '/packages/bycategory?category=' + category,{responseType: 'Text' as 'json'})
@@ -30,7 +37,7 @@ export class HttpService {
 
   getUser(){
       let headers = this.prepareRequest(localStorage.getItem("token"));
-      return this.http.get(this.API_URL + '/users/getCurrentUser', {headers});
+      return this.http.get(this.API_URL + '/users/getFullUser', {headers});
   }
 
 
