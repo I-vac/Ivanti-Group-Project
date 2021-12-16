@@ -27,4 +27,11 @@ public class UserController {
         User out = users.getFullUser(id);
         return ResponseEntity.ok().body(out);
     }
+
+    @RequestMapping("/getFullUser")
+    public ResponseEntity<User> getFullUser(Authentication authentication) {
+        System.out.println(authentication.getName());
+        User out = users.getCurrentUserByEmail(authentication.getName());
+        return ResponseEntity.ok().body(out);
+    }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-register',
@@ -7,26 +8,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _http: HttpService) { }
 
-  ngOnInit(): void {
-    /*this.validatingForm = new FormGroup({
-        signupFormModalName: new FormControl('', Validators.required),
-        signupFormModalEmail: new FormControl('', Validators.email),
-        signupFormModalPassword: new FormControl('', Validators.required),
-      });*/
+  visability;
+  target: any;
+
+  register() {
+    var firstName = ((document.getElementById("first_name") as HTMLInputElement).value);
+    var lastName = ((document.getElementById("last_name") as HTMLInputElement).value);
+    var email = ((document.getElementById("email") as HTMLInputElement).value);
+    var password = ((document.getElementById("password") as HTMLInputElement).value);
+
+    const body = {
+      first_name: firstName,
+      last_name: lastName,
+      email: email,
+      password: password
+    }
+
+    this._http.registerUser(body);
+
   }
 
-  /*get signupFormModalName() {
-      return this.validatingForm.get('signupFormModalName');
-    }
+  registerCreator() {
+    var firstName = ((document.getElementById("first_name") as HTMLInputElement).value);
+    var lastName = ((document.getElementById("last_name") as HTMLInputElement).value);
+  }
 
-    get signupFormModalEmail() {
-      return this.validatingForm.get('signupFormModalEmail');
-    }
 
-    get signupFormModalPassword() {
-      return this.validatingForm.get('signupFormModalPassword');
-    }*/
+  typeSelected() {
+    this.visability = true;
+  }
+
+  ngOnInit(): void {
+
+  }
 
 }

@@ -18,6 +18,12 @@ export class HttpService {
     return headers = new HttpHeaders().set("Authorization", tokenString)
   }
 
+  registerUser(body) {
+    return this.http.post<any>(this.API_URL + '/auth/register', body).subscribe(data => {
+      console.log(data)
+  })
+  }
+
   getPackages() {
     //let headers = this.prepareRequest(localStorage.getItem("token"));
     return this.http.get(this.API_URL + '/packages/all',{responseType: 'Text' as 'json'})

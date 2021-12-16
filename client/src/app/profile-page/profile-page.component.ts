@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpService } from '../http.service';
@@ -12,7 +13,6 @@ export class ProfilePageComponent implements OnInit {
   constructor(private _http: HttpService) { }
 
   currentUser: any;
-  user: any;
 
   getCurrentUser() {
     this._http.getUser()
@@ -21,36 +21,21 @@ export class ProfilePageComponent implements OnInit {
     });
   }
 
-  makeNewCreator() {
-    console.log(this.currentUser)
-    this.user = {
-      "user":{
-         "_id":{
-            "$oid": this.currentUser.id
-         },
-         "first_name": this.currentUser.first_name,
-         "last_name": this.currentUser.last_name,
-         "email": this.currentUser.email,
-         "password": this.currentUser.password,
-         "createdAt":{
-            "$date": this.currentUser.createdAt
-         }
-      },
-      "company":"MicroSoft",
-      "profession":"Engineer",
-      "_class":"com.ivantiWebApp.server.Model.ContentCreator"
-   }
-    
-    //let conv = JSON.stringify(myData);
-    this._http.makeCreator(this.user);
+  makeCreator() {
+    var company = ((document.getElementById("company") as HTMLInputElement).value);
+    var profession = ((document.getElementById("profession") as HTMLInputElement).value);
 
-    alert("Created!");
-    location.reload();
+    const body = {
+      company: company,
+      profession: profession
+    }
+
+    this._http.makeCreator(body);
   }
 
   ngOnInit(): void {
     this.getCurrentUser();
-    this.makeNewCreator();
+    //this.makeNewCreator();
   }
 
 }
