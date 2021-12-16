@@ -26,7 +26,7 @@ public class ServerApplication {
 		SpringApplication.run(ServerApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	CommandLineRunner init(RoleRepository roleRepository, UserRepository userRepository, ContentCreatorRepository contentCreatorRepository, PackageRepository packageRepository, CategoryRepository categoryRepository) {
 
 		return args -> {
@@ -52,6 +52,6 @@ public class ServerApplication {
 
 		};
 
-	}
+	}*/
 
 }
