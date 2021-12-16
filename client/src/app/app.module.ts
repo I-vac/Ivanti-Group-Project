@@ -51,7 +51,6 @@ import { SecurityComponent } from './security/security.component';
     MatSelectModule,
     ReactiveFormsModule,
     NgbModule,
-    MDBBootstrapModule.forRoot()
 
   ],
   providers: [TranslationService],
