@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { HttpService } from '../http.service';
 
+
 @Component({
   selector: 'app-market-place',
   templateUrl: './market-place.component.html',

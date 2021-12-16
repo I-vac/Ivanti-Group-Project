@@ -8,71 +8,114 @@
   </div>
 </div>
 <div>
-<h1 class="header2">Popular packages</h1>
 
 <div class="containerpp" allign="center">
 
-      <a class="card2" href="#">
-        <h2>Ivanti Package</h2>
-        <h3>OS 30</h3>
-        <p class="small">Card description with lots of great facts and interesting details.</p>
-      </a>
-      <a class="card2" href="#">
-        <h2>Ivanti Package</h2>
-        <h3>OS 30</h3>
-        <p class="small">Card description with lots of great facts and interesting details.</p>
-      </a>
-      <a class="card2" href="#">
-        <h2>Ivanti Package</h2>
-        <h3>OS 30</h3>
-        <p class="small">Card description with lots of great facts and interesting details.</p>
-      </a>
-      <a class="card2" href="#">
-        <h2>Ivanti Package</h2>
-        <h3>OS 30</h3>
-        <p class="small">Card description with lots of great facts and interesting details.</p>
-      </a>
+  <div class="textpp">
+    <p class="header">Those are the most popular packages on the platform</p>
+  </div>
+
+  <div class="cardDiv">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="rover" />
+      </div>
+      <div class="card-body">
+        <p class="tag tag-red">Technology</p>
+        <p>
+          An exploration into the truck's polarising design
+          An exploration into the truck's polarising design
+          An exploration into the truck's polarising design
+        </p>
+        <div class="bottom">
+          <p >Created By : Ahmed Alharthy</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="rover" />
+      </div>
+      <div class="card-body">
+        <p class="tag tag-red">Framework</p>
+        <p>
+          An exploration into the truck's polarising design
+          An exploration into the truck's polarising design
+          An exploration into the truck's polarising design
+        </p>
+        <div class="bottom">
+          <p >Created By : Ahmed Alharthy</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="rover" />
+      </div>
+      <div class="card-body">
+        <p class="tag tag-red">Technology</p>
+        <p>
+          An exploration into the truck's polarising design
+          An exploration into the truck's polarising design
+          An exploration into the truck's polarising design
+        </p>
+        <div class="bottom">
+          <p >Created By : Ahmed Alharthy</p>
+        </div>
+      </div>
+    </div>
+  </div>
       </div>
       <!--input type="text" class="form-control" (input)="showSearch($event.target.value)" placeholder="Search package..."-->
 
-  <div class="search-box">
-    <input type="text" class="search-input" (input)="showSearch($event.target.value)" placeholder="Search package...">
-    <a class="search-btn" href="#">
-      <i class="fas fa-search"></i>
-    </a>
-  </div>
 
+      <div class="sortDiv">
+        <div class="search-box">
+          <input type="text" class="search-input" (input)="showSearch($event.target.value)" placeholder="Search package...">
+          <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Categories</mat-label>
+          <mat-select [formControl]="categories" multiple name="selectCategory" #packageByCategory (selectionChange)="showPackageByCategory($event.value)">
+            <mat-select-trigger>
+              {{categories.value ? categories.value[0] : ''}}
+              <span *ngIf="categories.value?.length > 1" style="opacity: 0.75;font-size: 0.75em;">
+                (+{{categories.value.length - 1}} {{categories.value?.length === 2 ? 'other' : 'others'}})
+              </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let category of convertToJSON(category)" [value]="category">{{category}}</mat-option>
+          </mat-select>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;
 
+        <!--button (click)="sortClick()">Sort</button-->
+        <!--button className="bn632-hover bn28" (click)="sortClick()">Sort</button-->
+        <button class="button-78" role="button" (click)="sortClick()">Sort</button>
+      </div>
 <div class="containerPP">
 
-  <mat-form-field appearance="fill">
-    <mat-label>Categories</mat-label>
-    <mat-select [formControl]="categories" multiple name="selectCategory" #packageByCategory (selectionChange)="showPackageByCategory($event.value)">
-      <mat-select-trigger>
-        {{categories.value ? categories.value[0] : ''}}
-        <span *ngIf="categories.value?.length > 1" style="opacity: 0.75;font-size: 0.75em;">
-          (+{{categories.value.length - 1}} {{categories.value?.length === 2 ? 'other' : 'others'}})
-        </span>
-      </mat-select-trigger>
-      <mat-option *ngFor="let category of convertToJSON(category)" [value]="category">{{category}}</mat-option>
-    </mat-select>
-  </mat-form-field>&nbsp;&nbsp;&nbsp;
-
-  <!--button (click)="sortClick()">Sort</button-->
-  <!--button className="bn632-hover bn28" (click)="sortClick()">Sort</button-->
-  <button class="button-78" role="button" (click)="sortClick()">Sort</button>
-
-
-
+<div class="containerpp">
   <ul *ngIf="packages">
     <li *ngFor="let search of convertToJSON(search)">
-      <a class="card2" href="#">
-        <h2> {{search.title}} </h2>
-        <h3>OS 30</h3>
-        <p class="small">{{ search.description }}</p>
-      </a>
+      <div class="card">
+        <div class="card-header">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="rover" />
+        </div>
+        <div class="card-body">
+          <p class="tag tag-red">{{search.title}}</p>
+          <p>
+            {{ search.description }}
+            An exploration into the truck's polarising design
+          </p>
+          <div class="bottom">
+            <p >Created By : Ahmed Alharthy</p>
+          </div>
+        </div>
+      </div>
     </li>
   </ul>
+  </div>
 
 </div>
 
