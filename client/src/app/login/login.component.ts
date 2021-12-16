@@ -2,6 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { JwtClientService } from '../jwt-client.service';
 import { SecurityComponent } from '../security/security.component';
 
+/*const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});*/
 
 @Component({
   selector: 'app-login',
