@@ -25,7 +25,6 @@ dependencies {
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	//to convert the InputStream into a byte array
 	implementation 'commons-io:commons-io:2.6'
 
 	// JWT authentication dependencies

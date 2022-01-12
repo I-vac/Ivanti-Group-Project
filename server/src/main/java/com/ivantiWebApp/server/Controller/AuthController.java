@@ -29,7 +29,6 @@ public class AuthController {
 
     @Autowired
     JwtTokenProvider jwtTokenProvider;
-
     @Autowired
     UserRepository users;
 

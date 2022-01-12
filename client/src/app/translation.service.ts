@@ -32,7 +32,8 @@ export class TranslationService {
                 'home' : 'Home',
                 'list' : 'List' ,
                 'register' : 'Register',
-                'profile' : 'Profile'
+                'profile' : 'Profile',
+                'login' : 'Login'
             }
         }
     };
