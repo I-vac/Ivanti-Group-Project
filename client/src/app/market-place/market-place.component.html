@@ -101,7 +101,7 @@
 <div class="containerpp">
   <ul *ngIf="packages">
     <li *ngFor="let search of convertToJSON(search)">
-      <div class="card">
+      <div class="card" [routerLink]="['/packagepage',search.id]">
         <div class="card-header">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="rover" />
         </div>
