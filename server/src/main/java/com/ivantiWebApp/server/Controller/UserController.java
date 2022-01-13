@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     UserRepository users;
 
-    @RequestMapping("/getuser")
+    @RequestMapping("/getCurrentUser")
     public ResponseEntity<AuthDTO> getUser(Authentication authentication) {
         System.out.println(authentication.getName());
         AuthDTO out = users.getCurrentuser(authentication.getName());
@@ -25,6 +25,13 @@ public class UserController {
     @GetMapping("/getuser")
     public ResponseEntity<User> getFull(@RequestParam String id) {
         User out = users.getFullUser(id);
+        return ResponseEntity.ok().body(out);
+    }
+
+    @RequestMapping("/getFullUser")
+    public ResponseEntity<User> getFullUser(Authentication authentication) {
+        System.out.println(authentication.getName());
+        User out = users.getCurrentUserByEmail(authentication.getName());
         return ResponseEntity.ok().body(out);
     }
 }

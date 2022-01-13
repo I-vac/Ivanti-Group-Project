@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ContentCreatorRepository extends MongoRepository<ContentCreator, String> {
+
     @Query("{'user.id':'?0'}")
     ContentCreator getFullUser(String id);
 }

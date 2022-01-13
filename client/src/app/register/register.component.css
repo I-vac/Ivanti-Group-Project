@@ -1,0 +1,12 @@
+.registration{
+  width : 500px;
+border: 1px solid rgb(161, 161, 161);
+}
+
+.signupContainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:flex-end;
+  justify-content: center;
+
+}

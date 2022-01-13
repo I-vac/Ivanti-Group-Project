@@ -2,6 +2,7 @@ package com.ivantiWebApp.server.Service;
 
 import com.ivantiWebApp.server.DTO.PackageDTO;
 import com.ivantiWebApp.server.Model.Category;
+import com.ivantiWebApp.server.Model.ContentCreator;
 import com.ivantiWebApp.server.Model.Package;
 import com.ivantiWebApp.server.Model.User;
 import com.ivantiWebApp.server.Repository.CategoryRepository;
@@ -22,7 +23,6 @@ public class PackageService {
 
     @Autowired
     private CategoryRepository categoryRepository;
-
 
     public List<PackageDTO> getPackageByCategory(String category) {
         return packageRepository.getPackageByCategory(category);

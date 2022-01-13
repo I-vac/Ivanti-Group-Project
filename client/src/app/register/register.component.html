@@ -1,13 +1,9 @@
 <div class="container" style="margin-top:100px;" align="center">
 
-  <div class="pull-right">
-    Already a member ?
-  </div>
-  <a [routerLink]="['/login']" class="btn btn-info" style="margin-left:0px">Sign In</a>
   <div>
   </div>
 </div>
-
+<!--
 <div class="container" style="margin-top:50px;margin-left:300px">
 
   <div class="col-md-6 col-md-offset-3">
@@ -17,11 +13,11 @@
         <label><b>Role</b></label>
         <div class="radio">
           <label>
-            <input type="radio" name="genre" value="contentcreator" ><!--[(ngModel)]="role"-->
+            <input type="radio" name="genre" value="contentcreator" >
             Content Creator
           </label>
           <label style="margin-left:20px">
-            <input type="radio" name="genre" value="user" ><!--[(ngModel)]="role"-->
+            <input type="radio" name="genre" value="user" >
             User
           </label>
         </div>
@@ -31,46 +27,36 @@
     <div class="col-md-6">
       <div class="form-group">
         <label><b>First Name</b></label>
-        <input type="text" class="form-control" name="firstname" placeholder="First name" /><!--[(ngModel)]="firstname.value"-->
-        <!--<div [hidden]="!firstname.errors.required">
+        <input type="text" class="form-control" name="firstname" placeholder="First name" />
 
-        </div>-->
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label ><b>Last Name</b></label>
-        <input type="text" class="form-control" name="lastname" placeholder="Last name" /><!--[(ngModel)]="lastname.value"-->
-        <!--<div [hidden]="!lastname.errors.required">
+        <input type="text" class="form-control" name="lastname" placeholder="Last name" />
 
-        </div>-->
       </div>
     </div>
     <div class="col-md-12">
       <div class="form-group">
         <label ><b>Email</b></label>
-        <input type="text" class="form-control" name="email" placeholder="Email" /><!--[(ngModel)]="email.value"-->
-        <!--<div [hidden]="!email.errors.required">
+        <input type="text" class="form-control" name="email" placeholder="Email" />
 
-        </div>-->
       </div>
     </div>
     <div class="col-md-12">
       <div class="form-group">
         <label ><b>Password</b></label>
-        <input type="password" class="form-control" name="password" placeholder="Password" /><!--[(ngModel)]="password.value"-->
-        <!--<div [hidden]="!password.errors.required">
+        <input type="password" class="form-control" name="password" placeholder="Password" />
 
-        </div>-->
       </div>
     </div>
     <div class="col-md-12">
       <div class="form-group">
         <label ><b>Confirm Password</b></label>
-        <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm password" /><!--[(ngModel)]="confirmpassword.value"-->
-        <!--<div [hidden]="!confirmpassword.errors.required">
+        <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm password" />
 
-        </div>-->
       </div>
     </div>
 
@@ -91,5 +77,108 @@
     </div>
   </div>
 </div>
+-->
 
-<!--<app-footer></app-footer>-->
+<!-- Default form register -->
+
+<div class="signupContainer">
+
+
+<div class = "registration">
+
+<form class="text-center border border-light p-5">
+
+  <p class="h4 mb-4">Sign up</p>
+
+  <div class="col-md-12">
+    <div class="form-group" align="center">
+      <label><b>Email</b></label>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email address" /><!--[(ngModel)]="email.value"-->
+
+
+
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group" align="center">
+      <label><b>Password</b></label>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Password"/> <!--[(ngModel)]="password.value"-->
+
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="form-group" align="center">
+      <label><b>Firstname</b></label>
+      <input id="first_name" type="text" class="form-control" name="first_name" placeholder="firstname" /><!--[(ngModel)]="email.value"-->
+
+
+
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group" align="center">
+      <label><b>Lastname</b></label>
+      <input id="last_name" type="text" class="form-control" name="last_name" placeholder="lastname"/> <!--[(ngModel)]="password.value"-->
+
+    </div>
+  </div>
+
+  <select class="browser-default custom-select" (change)="typeSelected()">
+    <option selected>Select Role</option>
+    <option value="1">Content Creator</option>
+    <option value="2">User</option>
+  </select>
+  <small id="space" class="form-text text-muted mb-4">
+
+  </small>
+  <!-- Beginning of tempory makeContentCreator-->
+  <div id="wrap" class="wrap" *ngIf="visability">
+  <div class="col-md-12">
+    <div class="form-group" align="center">
+      <label><b>Company</b></label>
+      <input id="company" type="text" class="form-control" name="company" placeholder="company" /><!--[(ngModel)]="email.value"-->
+
+
+
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group" align="center">
+      <label><b>Profession</b></label>
+      <input id="profession" type="text" class="form-control" name="profession" placeholder="profession"/> <!--[(ngModel)]="password.value"-->
+
+  </div>
+  </div>
+
+  </div>
+  <!-- end of temp create contentcreator-->
+  <div *ngIf="visability;else elseBlock">
+    <div class="col-sm-12">
+      <a class="btn btn-info " target="__blank" (click)="registerCreator()">Register creator</a>
+    </div>
+
+</div>
+
+<ng-template #elseBlock>
+  <div class="col-sm-12">
+    <a class="btn btn-info " target="__blank" (click)="register()">Register</a>
+  </div>
+
+</ng-template>
+
+  <!-- Sign up button -->
+
+  <hr>
+
+  <!-- Terms of service -->
+  <p>By clicking
+    <em>Sign up</em> you agree to our
+    <a href="" target="_blank">terms of service</a></p>
+
+</form>
+
+</div>
+
+</div>
+<!-- Default form register -->

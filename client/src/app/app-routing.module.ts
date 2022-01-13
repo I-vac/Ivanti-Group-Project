@@ -6,6 +6,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UploadDownloadComponent } from './upload-download/upload-download.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { RegisterComponentComponent } from './register-component/register-component.component';
+import { PackagePageComponent } from './package-page/package-page.component';
 
 
 const routes: Routes = [
@@ -13,7 +16,11 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent},           // Add this
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'file', component: UploadDownloadComponent}
+  { path: 'file', component: UploadDownloadComponent},
+  { path: 'profile', component: ProfilePageComponent},
+  { path: 'createPackage', component: RegisterComponentComponent},
+  { path: 'packagepage', component: PackagePageComponent},
+  { path: 'packagepage/:id', component: PackagePageComponent}
 ];
 
 @NgModule({

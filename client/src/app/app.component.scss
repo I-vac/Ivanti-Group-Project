@@ -1,0 +1,14 @@
+body {
+    justify-content: center;
+}
+.pageContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerContent {
+    width: 85%;
+}

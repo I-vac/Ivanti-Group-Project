@@ -87,9 +87,18 @@ public class PackageController {
 
     @CrossOrigin
     @PostMapping("/create")
-    public ResponseEntity<List<PackageDTO>> createPackage() {
-        List<PackageDTO> packages = repoImplementation.findByUser();
-
-        return ResponseEntity.ok().body(packages);
+    public ResponseEntity<Package> createPackage(@RequestBody Package packRB ) {
+        Package pack = packRB;
+        repo.save(pack);
+        return ResponseEntity.ok().body(pack);
     }
+
+    @CrossOrigin
+    @GetMapping("/byid")
+    public ResponseEntity<List<PackageDTO>> findPackageByID(@RequestParam String id) {
+        List<PackageDTO> packageid = repo.getPackageById(id);
+
+        return ResponseEntity.ok().body(packageid);
+    }
+
 }

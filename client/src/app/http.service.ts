@@ -12,15 +12,28 @@ export class HttpService {
 
   currentUser: any;
 
- prepareRequest(token){
+  prepareRequest(token){
     var headers;
     let tokenString = 'Bearer ' + token;
     return headers = new HttpHeaders().set("Authorization", tokenString)
   }
 
+  registerUser(body) {
+    return this.http.post<any>(this.API_URL + '/auth/register', body).subscribe(data => {
+      console.log(data)
+  })
+  }
+
   getPackages() {
     //let headers = this.prepareRequest(localStorage.getItem("token"));
     return this.http.get(this.API_URL + '/packages/all',{responseType: 'Text' as 'json'})
+  }
+
+  makeCreator(body) {
+    let headers = this.prepareRequest(localStorage.getItem("token"));
+    return this.http.post<any>(this.API_URL + '/content', body,{headers}).subscribe(data => {
+      console.log(data)
+  })
   }
 
   getPackagesByCategory(category) {
@@ -30,9 +43,9 @@ export class HttpService {
 
   getUser(){
       let headers = this.prepareRequest(localStorage.getItem("token"));
-      return this.http.get(this.API_URL + '/users/getuser', {headers});
+      return this.http.get(this.API_URL + '/users/getFullUser', {headers});
   }
-  
+
 
 
   searchBar(search) {
@@ -46,6 +59,23 @@ export class HttpService {
   getAllCategories(){
     //let headers = this.prepareRequest(localStorage.getItem("token"));
     return this.http.get(this.API_URL + '/packages/category/all',{ responseType: 'Text' as 'json'})
+  }
+
+  createItem() {
+    var postId;
+    this.http.post<any>(this.API_URL +'/ items', { title: 'Angular POST Request Example', description:'asdasd' }).subscribe(data => {
+        postId = data.id;
+    })
+  }
+
+  createPackage(pack) {
+    var postId
+    this.http.post<any>(this.API_URL+ '/packages/create', pack).subscribe(data => { postId =data.id})
+
+  }
+
+  viewPackage(userId:any) {
+    return this.http.get(this.API_URL + '/packages/byid?id='+ userId,{ responseType: 'Text' as 'json'})
   }
 
 }

@@ -1,7 +1,10 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { equal } from 'assert';
 import { HttpService } from '../http.service';
+
 
 @Component({
   selector: 'app-market-place',
@@ -17,7 +20,8 @@ export class MarketPlaceComponent implements OnInit {
   packagebycategory: Object;
   categories = new FormControl();
 
-  constructor(private _http: HttpService) { }
+  id: string;
+  constructor(private _http: HttpService, private router: Router) { }
 
   onSearchChange(searchValue: string): void {
     console.log(searchValue);
@@ -85,15 +89,21 @@ export class MarketPlaceComponent implements OnInit {
         })
       }
 
-
   ngOnInit() {
   this.showCategory();
+  this._http.createItem();
 
+  
+  
     this._http.getPackages().subscribe(data => {
       this.packages = data
       console.log(this.packages);
   });
+}
 
+viewPackage(userId:any) {
+
+  this.router.navigate(['/packagepage/', userId]);
 }
 
 }

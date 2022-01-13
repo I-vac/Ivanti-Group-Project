@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { MarketPlaceComponent } from './market-place/market-place.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
@@ -19,9 +18,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
 import { SecurityComponent } from './security/security.component';
+import { PackagePageComponent } from './package-page/package-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SecurityComponent } from './security/security.component';
     RegisterComponent,
     FooterComponent,
     TranslatePipe,
-    SecurityComponent
+    SecurityComponent,
+    ProfilePageComponent,
+    PackagePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import { SecurityComponent } from './security/security.component';
     MatGridListModule,
     MatFormFieldModule,
     MatSelectModule,
+    ReactiveFormsModule,
     NgbModule,
+    ReactiveFormsModule,
     MDBBootstrapModule.forRoot()
 
   ],

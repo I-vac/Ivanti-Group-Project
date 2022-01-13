@@ -14,6 +14,7 @@ export class AppComponent {
   items: any;
   constructor(private http: HttpClient, public translationService: TranslationService, private httpService: HttpService) {}
   
+  
   currentUser: any;
 
   getCurrentUser() {
@@ -29,7 +30,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.getCurrentUser();
-  }  
+  }
 
   
 

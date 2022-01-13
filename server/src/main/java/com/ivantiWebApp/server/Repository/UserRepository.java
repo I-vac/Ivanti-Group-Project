@@ -14,6 +14,9 @@ public interface UserRepository extends MongoRepository<User, String> {
     @Query("{'email':'?0'}")
     AuthDTO getCurrentuser(String email);
 
+    @Query("{'email':'?0'}")
+    User getCurrentUserByEmail(String email);
+
     @Query("{'id':'?0'}")
     User getFullUser(String id);
 

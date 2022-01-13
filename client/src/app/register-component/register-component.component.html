@@ -1,21 +1,59 @@
-
+<div class="container">
     <noscript>
         <h2 style="text-align: center;">Sorry! Browser does not support TypeScript.</h2>
     </noscript>
-    <div class="file-container">
-        <div class="file-upload-header">
-            <h2>File Upload / Download Example</h2>
-        </div>
-        <div class="file-upload">
-            <form id="fileUploadForm">
-                <h3>File Upload</h3>
-                <input type="file" name="file" id="fileUploadInput" class="file-input" required>
-                <button type="submit" class="submit-btn">Upload</button>
-            </form>
-        </div>
 
-        <div class="file-download">
-            <div id="downloadFileUrl"></div>
-        </div>
-    </div>
     <script src="./upload-download.component.ts"></script>
+
+
+        <form class="registerForm" >
+            <h2 >Create a new package </h2>
+            <div class="subForm">
+                <div class="leftGrid">
+                    <div class="controls half">
+                        <label >Name*</label>
+                        <input id="name" type="text"  name="Name" required>
+                    </div>
+
+                    <div class="controls half">
+                        <label >OS*</label>
+                        <input id="OS" type="text"  name="OS" required>
+                    </div>
+
+                    <div class="controls full">
+                        <label >Categories*</label>
+                        <input id="categories" type="text"  name="category" required>
+                    </div>
+
+                    <div class="controls full">
+                        <label >Package Description</label>
+                        <textarea > </textarea>
+                    </div>
+
+
+                </div>
+                <div class="rightGrid">
+                    <div>
+                        <div class="controls full">
+                            <label >Installation description*</label>
+                            <textarea > </textarea>
+                        </div>
+                        <div class="file-upload">
+                            <form id="fileUploadForm">
+                                <h3>File Upload</h3>
+                                <input type="file" name="file" id="fileUploadInput" class="full" required>
+                                <button type="submit" class="submit-btn">Upload</button>
+                            </form>
+                        </div>
+
+                        <div class="file-download">
+                            <div id="downloadFileUrl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button (click)="onSubmit()" class="crbtn">Create</button>
+            </div>
+        </form>
+    </div>

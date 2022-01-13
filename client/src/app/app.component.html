@@ -8,7 +8,7 @@
     <img routerLink="/" class="logo" src="https://tinyimg.io/i/rvpoMM4.png"  />
     <nav>
       <ul>
-        <li><a href="#" routerLink="/"><b>{{'login' | translate}}</b></a></li>
+        <li><a href="#" routerLink="/home"><b>{{'home' | translate}}</b></a></li>
         <li><a href="#" routerLink="/market">{{'list' | translate}}</a></li>
         <li><a href="#" routerLink="/register">{{'register' | translate}}</a></li>
         <li><a href="#" routerLink="/login">{{'login' | translate}}</a></li>
@@ -23,9 +23,14 @@
   </div>
 
 
+
+
 </header>
 
-<div class="container">
-  <router-outlet></router-outlet>
+
+<div class="pageContainer">
+  <div class="centerContent">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <app-footer></app-footer>
