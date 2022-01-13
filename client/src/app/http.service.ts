@@ -29,6 +29,14 @@ export class HttpService {
     return this.http.get(this.API_URL + '/packages/all',{responseType: 'Text' as 'json'})
   }
 
+  createFile(file) {
+    var fileid
+     this.http.post<any>("http://localhost:8080/file/upload", file).subscribe(data => {
+      fileid = data
+    })
+    return fileid
+  }
+
   makeCreator(body) {
     let headers = this.prepareRequest(localStorage.getItem("token"));
     return this.http.post<any>(this.API_URL + '/content', body,{headers}).subscribe(data => {

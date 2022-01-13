@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { HttpService } from '../http.service';
 import {FormControl, Validators} from '@angular/forms';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 @Component({
   selector: 'app-register-component',
@@ -13,49 +13,49 @@ export class RegisterComponentComponent implements OnInit {
 
   constructor(private httpService: HttpService) { }
   packages: Object;
-  category: Object;
-
+  currentUser: any;
+  
+  uploadForm: HTMLElement;
+  uploadFormInput: HTMLElement;
+  downloadFile: HTMLElement;
+  fileid: any;
 
   ngOnInit(): void {
+    this.uploadForm = <HTMLElement>document.querySelector("#fileUploadForm");
+    this.uploadFormInput = <HTMLInputElement>document.querySelector("#fileUploadInput");
+    this.downloadFile = <HTMLElement>document.querySelector("#downloadFileUrl");
   }
-
-  showCategory() {
-    this.httpService.getAllCategories().subscribe(data => {
-      this.category = data;
-    })
-  }
-
 
   onSubmit(): void {
-    var name = ((document.getElementById("name") as HTMLInputElement).value);
-    var OS = ((document.getElementById("OS") as HTMLInputElement).value);
+    var title = ((document.getElementById("title") as HTMLInputElement).value);
     var categories = ((document.getElementById("categories") as HTMLInputElement).value);
-    this.packages = {
-    "category": {
-      "id": "string",
-      "name": "string"
-    },
-    "contentCreator": {
-      "company": "string",
-      "profession": "string",
-      "user": {
-        "createdAt": "2021-12-14T10:06:39.575Z",
-        "email": "string",
-        "enabled": true,
-        "first_name": "string",
-        "last_name": "string",
-        "password": "string",
-        "roles": [
-          {
+    var files = ((document.getElementById("fileUploadInput") as HTMLInputElement).files);
+    
+      this.httpService.createFile(files[0])
+
+      console.log("ollaa")
+
+      this.httpService.getUser()
+      .subscribe(user => {
+  
+        this.packages = {
+          "category": {
             "id": "string",
-            "role": "string"
-          }
-        ]
-      }
-    },
-    "description": categories,
-    "title": name};
-  this.httpService.createPackage(this.packages);
+            "name": "string"
+          },
+          "contentCreator": {
+            user,
+            "company": "company",
+            "profession": "profession"
+          } ,
+          "fileId": this.fileid,
+          "description": categories,
+          "title": title};
+        this.httpService.createPackage(this.packages);
+      });
+
+    
   }
+
 
 }
