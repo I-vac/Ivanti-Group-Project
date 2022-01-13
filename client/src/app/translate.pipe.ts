@@ -5,9 +5,6 @@ import { TranslationService } from './translation.service';
   name: 'translate',
   pure: false
 })
-@Injectable({
-  providedIn: 'root'
-})
 export class TranslatePipe implements PipeTransform {
 
   constructor(private translationService: TranslationService) {}

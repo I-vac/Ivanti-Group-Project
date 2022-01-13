@@ -54,8 +54,7 @@ import { LoadPageComponent } from './load-page/load-page.component';
     ReactiveFormsModule,
     NgbModule,
     ReactiveFormsModule,
-    MDBBootstrapModule.forRoot(),
-    TranslationService
+    MDBBootstrapModule.forRoot()
 
   ],
   providers: [TranslationService],
