@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="787919ac-c328-4e75-ae0b-fd362c12a3ba" name="Changes" comment="Front&amp;backend commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/market-place/market-place.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/market-place/market-place.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/market-place/market-place.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/market-place/market-place.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/profile-page/profile-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/profile-page/profile-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/register-component/register-component.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/register-component/register-component.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/register/register.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/translation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/translation.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/ivantiWebApp/server/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/ivantiWebApp/server/Controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/ivantiWebApp/server/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/ivantiWebApp/server/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/register/register.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639653958472</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Front&amp;backend commit">
+      <created>1642013158954</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642013158954</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

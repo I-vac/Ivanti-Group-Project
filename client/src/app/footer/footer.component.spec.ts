@@ -1,6 +1,5 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { }
-
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -9,7 +8,8 @@ describe('FooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
+      declarations: [ FooterComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   });
@@ -18,9 +18,5 @@ describe('FooterComponent', () => {
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });

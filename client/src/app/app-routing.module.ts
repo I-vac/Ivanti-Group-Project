@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { UploadDownloadComponent } from './upload-download/upload-download.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
+import { LoadPageComponent } from './load-page/load-page.component';
+import { TranslatePipe } from './translate.pipe';
 
 
 const routes: Routes = [
@@ -17,6 +19,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'file', component: UploadDownloadComponent},
   { path: 'profile', component: ProfilePageComponent},
+  { path: 'loading', component: LoadPageComponent},
   { path: 'createPackage', component: RegisterComponentComponent}
 ];
 

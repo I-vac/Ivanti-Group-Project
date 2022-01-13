@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
 import { SecurityComponent } from './security/security.component';
+import { LoadPageComponent } from './load-page/load-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SecurityComponent } from './security/security.component';
     FooterComponent,
     TranslatePipe,
     SecurityComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    LoadPageComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { SecurityComponent } from './security/security.component';
     ReactiveFormsModule,
     NgbModule,
     ReactiveFormsModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    TranslationService
 
   ],
   providers: [TranslationService],

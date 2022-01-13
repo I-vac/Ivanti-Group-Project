@@ -1,9 +1,12 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Injectable, Pipe, PipeTransform } from '@angular/core';
 import { TranslationService } from './translation.service';
 
 @Pipe({
   name: 'translate',
   pure: false
+})
+@Injectable({
+  providedIn: 'root'
 })
 export class TranslatePipe implements PipeTransform {
 

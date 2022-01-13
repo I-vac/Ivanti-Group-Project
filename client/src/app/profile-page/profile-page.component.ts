@@ -9,6 +9,7 @@ import { HttpService } from '../http.service';
   styleUrls: ['./profile-page.component.scss']
 })
 export class ProfilePageComponent implements OnInit {
+  
 
   constructor(private _http: HttpService) { }
 
@@ -36,6 +37,7 @@ export class ProfilePageComponent implements OnInit {
   ngOnInit(): void {
     this.getCurrentUser();
     //this.makeNewCreator();
+    this.currentUser.first_name = "test";
   }
 
 }

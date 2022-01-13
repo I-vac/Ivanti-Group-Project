@@ -1,16 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, private router: Router) { }
 
   readonly API_URL = 'http://localhost:8080/api'
 
   currentUser: any;
+
+  isloggedIn(){
+    if(localStorage.length == 0) {
+      return false
+    } else{
+      return true;
+    }
+  }
+
 
   prepareRequest(token){
     var headers;

@@ -18,7 +18,7 @@ export class TranslationService {
             languange: 'ger',
             values: {
                 'example' : 'Beispiel',
-                'home' : 'Heim',
+                'marketplace' : 'Marketplace',
                 'list' : 'Aufführen' ,
                 'register' : 'Registrieren',
                 'login' : 'Anmeldung',
@@ -29,7 +29,7 @@ export class TranslationService {
             languange: 'eng',
             values: {
                 'example' : 'Example',
-                'home' : 'Home',
+                'marketplace' : 'Marketplace',
                 'list' : 'List' ,
                 'register' : 'Register',
                 'profile' : 'Profile',

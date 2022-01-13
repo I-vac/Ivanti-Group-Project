@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { HttpService } from '../http.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private _http: HttpService) { }
+  constructor(private _http: HttpService, private router: Router) { }
 
   visability;
   target: any;
@@ -27,6 +28,8 @@ export class RegisterComponent implements OnInit {
     }
 
     this._http.registerUser(body);
+
+    this.router.navigateByUrl("/profile");
 
   }
 
