@@ -92,4 +92,13 @@ public class PackageController {
         repo.save(pack);
         return ResponseEntity.ok().body(pack);
     }
+
+    @CrossOrigin
+    @GetMapping("/byid")
+    public ResponseEntity<List<PackageDTO>> findPackageByID(@RequestParam String id) {
+        List<PackageDTO> packageid = repo.getPackageById(id);
+
+        return ResponseEntity.ok().body(packageid);
+    }
+
 }
