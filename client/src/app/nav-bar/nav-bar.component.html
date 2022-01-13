@@ -1,0 +1,32 @@
+<!-- 
+<header>
+    <div class="navbar">
+      <img routerLink="/" class="logo" src="https://tinyimg.io/i/rvpoMM4.png"  />
+      <nav>
+        <ul>
+          <li><a [hidden]="loggedIn" routerLink="/home"><b>{{'home' | translate}}</b></a></li>
+          <li><a [hidden]="!loggedIn" routerLink="/market">{{'marketplace' | translate}}</a></li>
+          <li><a [hidden]="!loggedIn" routerLink="/profile">{{'profile' | translate}}</a></li>
+          <li><a [hidden]="loggedIn" routerLink="/register">{{'register' | translate}}</a></li>
+          <li><a [hidden]="loggedIn" routerLink="/login">{{'login' | translate}}</a></li>
+          <li><a [hidden]="!loggedIn" (click)="logout()">Logout</a></li>
+          <li>
+            <select [(ngModel)]="translationService.language">
+              <option *ngFor="let language of translationService.languages" [ngValue]="language">{{language}}</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+  
+  
+  
+  </header>
+  
+  
+  <div class="pageContainer">
+    <div class="centerContent"> -->
+      <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  

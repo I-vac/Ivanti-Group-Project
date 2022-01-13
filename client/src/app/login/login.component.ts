@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { JwtClientService } from '../jwt-client.service';
 import { SecurityComponent } from '../security/security.component';
 
@@ -21,7 +22,7 @@ signInButton.addEventListener('click', () => {
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private service: JwtClientService) { }
+  constructor(private service: JwtClientService, private router: Router) { }
 
   login() {
     var email = ((document.getElementById("email") as HTMLInputElement).value);
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
     }
 
     this.service.getJwtToken(authBody);
-    //window.location.href = "/market";
+    this.router.navigateByUrl("/loading");
   }
 
   ngOnInit(): void {

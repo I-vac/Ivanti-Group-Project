@@ -1,23 +1,26 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+import { TranslationService } from '../translation.service';
 
-import { LoginComponent } from './login.component';
+import { LoadPageComponent } from './load-page.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('LoadPageComponent', () => {
+  let component: LoadPageComponent;
+  let fixture: ComponentFixture<LoadPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginComponent],
-      imports: [HttpClientTestingModule, RouterTestingModule]
+      declarations: [ LoadPageComponent ],
+      imports: [ HttpClientTestingModule, RouterTestingModule],
+      providers: [TranslationService]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(LoadPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

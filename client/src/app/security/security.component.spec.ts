@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import{ HttpClientTestingModule } from'@angular/common/http/testing';
 
 import { SecurityComponent } from './security.component';
 
@@ -8,7 +9,9 @@ describe('SecurityComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SecurityComponent ]
+      declarations: [ SecurityComponent ],
+      imports: [ HttpClientTestingModule ]
+
     })
     .compileComponents();
   });
@@ -22,4 +25,7 @@ describe('SecurityComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  afterEach(() => {
+    TestBed.resetTestingModule();
+});
 });
