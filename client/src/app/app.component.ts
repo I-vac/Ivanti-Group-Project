@@ -14,8 +14,8 @@ export class AppComponent {
   readonly ROOT_URL = 'http://127.0.0.1:8080/api';
   items: any;
   constructor(private http: HttpClient, public translationService: TranslationService, private httpService: HttpService, public router: Router) {}
-  
-  
+
+
   currentUser: any;
   loggedIn: boolean;
 
@@ -40,7 +40,7 @@ export class AppComponent {
     this.loggedIn = this.httpService.isloggedIn();
   }
 
-  
 
-  
+
+
 }

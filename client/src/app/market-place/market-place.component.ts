@@ -77,7 +77,11 @@ export class MarketPlaceComponent implements OnInit {
       this._http.getAllCategories().subscribe(data => {
         this.category = data;
       })
-    }
+  }
+
+   someFunction(input){
+      alert(input);
+   }
 
 
   showPackageByCategory(category) {
