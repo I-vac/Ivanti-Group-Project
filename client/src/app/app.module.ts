@@ -23,7 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
 import { SecurityComponent } from './security/security.component';
-import { LoadPageComponent } from './load-page/load-page.component';
+import { PackagePageComponent } from './package-page/package-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { LoadPageComponent } from './load-page/load-page.component';
     TranslatePipe,
     SecurityComponent,
     ProfilePageComponent,
-    LoadPageComponent
+    PackagePageComponent,
   ],
   imports: [
     BrowserModule,

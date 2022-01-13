@@ -84,5 +84,9 @@ export class HttpService {
 
   }
 
+  viewPackage(userId:any) {
+    return this.http.get(this.API_URL + '/packages/byid?id='+ userId,{ responseType: 'Text' as 'json'})
+  }
+
 }
 
