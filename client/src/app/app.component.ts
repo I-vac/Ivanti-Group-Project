@@ -8,13 +8,14 @@ import { HttpService } from './http.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'client';
   readonly ROOT_URL = 'http://127.0.0.1:8080/api';
   items: any;
   constructor(private http: HttpClient, public translationService: TranslationService, private httpService: HttpService) {}
-  
-  
+
+
   currentUser: any;
 
   getCurrentUser() {
@@ -32,7 +33,7 @@ export class AppComponent {
     this.getCurrentUser();
   }
 
-  
 
-  
+
+
 }
