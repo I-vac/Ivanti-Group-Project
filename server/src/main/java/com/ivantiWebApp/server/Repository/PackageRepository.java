@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public interface PackageRepository extends MongoRepository<Package, String> {
     //public List<Package> findPackageByProperties(); //String userId, String packageID, String packageTitle
-
     @Query("{'_id':'?0'}")
+
     List<PackageDTO> getPackageById(String id);
 
     @Query("{'category.name':'?0'}")

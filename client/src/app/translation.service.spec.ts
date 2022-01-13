@@ -10,7 +10,7 @@ describe('TranslationService', () => {
     TestBed.configureTestingModule({
       declarations: [TranslatePipe],
       imports: [TranslationService],
-      providers: [TranslationService]
+      providers: [TranslationService, TranslatePipe]
     });
     service = TestBed.inject(TranslationService);
   });

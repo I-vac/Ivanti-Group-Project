@@ -13,8 +13,4 @@ describe('TranslationService', () => {
     });
     service = TestBed.inject(TranslatePipe);
   });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
 });

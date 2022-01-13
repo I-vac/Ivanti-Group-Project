@@ -16,7 +16,7 @@ describe('AppComponent', () => {
         TranslatePipe
       ],
       imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([])],
-      providers: [ HttpService, TranslationService ]
+      providers: [ HttpService, TranslationService, TranslatePipe ]
     }).compileComponents();
   });
 
