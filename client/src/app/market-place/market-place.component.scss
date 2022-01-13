@@ -1,17 +1,12 @@
 
-.pageHeader {
-  font-size: 40px;
-  margin: 20px;  
-  letter-spacing: 20px;
-  word-spacing: 20px;
-  text-align: center;
-  text-transform: uppercase;
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
 }
 
 .sortDiv {
   display: flex;
   justify-content: space-between;
-
   h1 {
     font-size: 30px;
     position: relative;
@@ -28,7 +23,7 @@
     min-height: 300px;
     background-color: #dbd5d4;
     margin-bottom: 20px;
-    
+
     .news {
 
 

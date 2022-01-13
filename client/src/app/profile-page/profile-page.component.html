@@ -9,9 +9,9 @@
                   <div class=" align-items-center text-center">
                     <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>John Doe {{currentUser.first_name | json}}</h4>
+                      <h4> {{currentUser.first_name}} {{currentUser.last_name}}</h4>
                       <p class="text-secondary mb-1">Content Creator</p>
-                      <p class="text-muted font-size-sm">JhonAlharthy@gmail.com</p>
+                      <p class="text-muted font-size-sm">{{currentUser.email}}</p>
                       <button class="btn btn-primary">Edit Profile</button>
                       <button class="btn btn-outline-primary">Upgrade</button>
                     </div>
