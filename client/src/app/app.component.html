@@ -17,11 +17,11 @@
     <img routerLink="/" class="logo" src="https://tinyimg.io/i/rvpoMM4.png"  />
     <nav>
       <ul>
-        <li><a href="#" routerLink="/home"><b>{{'home' | translate}}</b></a></li>
-        <li><a href="#" routerLink="/market">{{'list' | translate}}</a></li>
-        <li><a href="#" routerLink="/register">{{'register' | translate}}</a></li>
-        <li><a href="#" routerLink="/login">{{'login' | translate}}</a></li>
-        <li><a href="#" routerLink="/profile">{{'profile' | translate}}</a></li>
+        <li><a routerLink="/home"><b>{{'home' | translate}}</b></a></li>
+        <li><a routerLink="/market">{{'store' | translate}}</a></li>
+        <li><a routerLink="/register">{{'register' | translate}}</a></li>
+        <li><a routerLink="/login">{{'login' | translate}}</a></li>
+        <li><a routerLink="/profile">{{'profile' | translate}}</a></li>
         <li>
           <select [(ngModel)]="translationService.language">
             <option *ngFor="let language of translationService.languages" [ngValue]="language">{{language}}</option>

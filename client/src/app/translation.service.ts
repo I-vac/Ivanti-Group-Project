@@ -19,7 +19,7 @@ export class TranslationService {
             values: {
                 'example' : 'Beispiel',
                 'home' : 'Heim',
-                'list' : 'Aufführen' ,
+                'store' : 'Aufführen' ,
                 'register' : 'Registrieren',
                 'login' : 'Anmeldung',
                 'profile' : 'Profil'
@@ -30,8 +30,9 @@ export class TranslationService {
             values: {
                 'example' : 'Example',
                 'home' : 'Home',
-                'list' : 'List' ,
+                'store' : 'Store' ,
                 'register' : 'Register',
+                'login' : 'Login',
                 'profile' : 'Profile'
             }
         }
