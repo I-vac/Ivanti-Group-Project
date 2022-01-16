@@ -48,7 +48,7 @@ export class HttpService {
 
   getPackagesByCategory(category) {
       //let headers = this.prepareRequest(localStorage.getItem("token"));
-      return this.http.get(this.API_URL + '/packages/bycategory?category=' + category,{responseType: 'Text' as 'json'})
+      return this.http.get(this.API_URL + '/packages/bycategory?categories=' + category,{responseType: 'Text' as 'json'})
     }
 
   getUser(){

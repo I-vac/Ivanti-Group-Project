@@ -30,6 +30,7 @@ export class MarketPlaceComponent implements OnInit {
   showSearch(search) {
     this._http.searchBar(search).subscribe(data => {
       this.search = data;
+    //  console.log(this.search);
     })
   }
 
@@ -88,17 +89,23 @@ export class MarketPlaceComponent implements OnInit {
 
 
   showPackageByCategory(category) {
-        this._http.getPackagesByCategory(category).subscribe(data => {
-          this.packagebycategory = data;
-        })
-      }
+  console.log(category);
+  if (category.length>0) {
+      console.log(category);
+              this._http.getPackagesByCategory(category).subscribe(data => {
+                this.search = data;
+              })
+  }
+  else {
+    this.showSearch("");
+  }
+  }
 
   ngOnInit() {
   this.showCategory();
   this._http.createItem();
+  this.showSearch("");
 
-  
-  
     this._http.getPackages().subscribe(data => {
       this.packages = data
       console.log(this.packages);
