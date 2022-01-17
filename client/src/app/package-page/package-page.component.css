@@ -1,4 +1,5 @@
-.container {  display: grid;
+.container {
+    display: grid;
     grid-template-columns: 240px 500px 150px;
     grid-template-rows: 90px 200px;
     gap: 10px 20px;
@@ -8,7 +9,7 @@
       "image description buttons";
     padding-top: 60px;
   }
-  
+
   .title {  display: grid;
     grid-template-columns: 500px;
     grid-template-rows: 30px 20px 20px;
@@ -20,31 +21,31 @@
       "os";
     grid-area: title;
   }
-  
-  .name { 
+
+  .name {
       grid-area: name;
       font-size: 40px;
       font-weight: bold;
  }
-  
+
   .author { grid-area: author; }
-  
+
   .os { grid-area: os; }
-  
-  .image img{ 
+
+  .image img{
     grid-area: image;
     width: 240px;
     height: 280px;
     object-fit: auto;
    }
-  
-  
 
-  .description { 
+
+
+  .description {
     grid-area: description;
     font-size: 15px;
   }
-  
+
   .buttons { grid-area: buttons; }
 
 
@@ -53,4 +54,3 @@ hr.divider {
   margin-top: 1px;
 }
 
-  

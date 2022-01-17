@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
@@ -67,9 +68,13 @@ public class PackageController {
     @CrossOrigin
     @GetMapping("/bycategory")
     // http://127.0.0.1:8080/api/packages/bycategory?category=
-    public ResponseEntity<List<PackageDTO>> findPackageByCategory(@RequestParam String category) {
-        List<PackageDTO> packages = repo.getPackageByCategory(category);
+    public ResponseEntity<List<PackageDTO>> findPackageByCategory(@RequestParam String categories) {
+       String[] cat=categories.split(",");
 
+        List<PackageDTO> packages=new ArrayList<>();
+        for (String category:cat) {
+            packages.addAll(repo.getPackageByCategory(category));
+        }
         return ResponseEntity.ok().body(packages);
     }
 
