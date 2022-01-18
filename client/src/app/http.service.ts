@@ -101,5 +101,11 @@ export class HttpService {
     return this.http.get(this.API_URL + '/packages/byid?id='+ userId,{ responseType: 'Text' as 'json'})
   }
 
+  getPackageByUserId(){
+    let headers = this.prepareRequest(localStorage.getItem("token"));
+    return this.http.get(this.API_URL + '/packages/byCreatorId', {headers});
+}
+
+
 }
 

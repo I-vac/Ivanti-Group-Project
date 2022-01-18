@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
 
     this._http.registerUser(body);
 
-    this.router.navigateByUrl("/profile");
+    this.router.navigateByUrl("/login");
 
   }
 

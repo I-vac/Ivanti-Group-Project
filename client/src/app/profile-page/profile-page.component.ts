@@ -16,6 +16,7 @@ export class ProfilePageComponent implements OnInit {
 
   currentUser: any;
   isCreator: any;
+  packages: any;
 
   getCurrentUser() {
     this._http.getUser()
@@ -43,12 +44,22 @@ export class ProfilePageComponent implements OnInit {
     this._http.makeCreator(body);
   }
 
+  checkCreatorId() {
+    this._http.getPackageByUserId()
+    .subscribe(data => {
+      this.packages = data;
+    });
+  }
+
   ngOnInit(): void {
     this.getCurrentUser();
     this.checkCreator();
+    this.checkCreatorId();
     //this.checkCreator();
     //this.makeNewCreator();
     //this.currentUser.first_name = "test";
   }
+
+  
 
 }

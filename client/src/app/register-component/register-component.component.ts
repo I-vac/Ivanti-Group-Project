@@ -78,7 +78,7 @@ export class RegisterComponentComponent implements OnInit {
             "profession": "profession"
           } ,
           "fileId": this.fileid,
-          "description": categories,
+          "description": "description",
           "title": title,
           "installDesc" : "installDesc",
           "os" : "os"

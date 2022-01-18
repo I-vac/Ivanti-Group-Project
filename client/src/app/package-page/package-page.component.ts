@@ -14,6 +14,8 @@ export class PackagePageComponent implements OnInit {
     private ActivatedRoute: ActivatedRoute) { }
   sub;
 
+  downloadFile: HTMLElement;
+
   packageInfo:any;
 
   currentUser: any;
@@ -42,7 +44,18 @@ export class PackagePageComponent implements OnInit {
     this.getContent();
     })
 
-  
+    this.downloadFile = <HTMLElement>document.querySelector("#downloadFileUrl");
+
+    let downloadUrl = "http://localhost:8080/file/download/" + this.packageInfo.fileId;
+
+    this.downloadFile.innerHTML = '<p>File Uploaded Successfully. <br/> <a href="' + downloadUrl + '" target="_self">Download File</a></p>';
+    this.downloadFile.style.display = "block";
+    
+  }
+
+  DownloadFile(){
+    window.location.href = 'http://localhost:8080/file/download/' + this.packageInfo.fileId;
+
   }
 
 

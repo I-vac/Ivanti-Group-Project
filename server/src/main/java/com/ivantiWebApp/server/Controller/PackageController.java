@@ -1,11 +1,9 @@
 package com.ivantiWebApp.server.Controller;
 
-import com.ivantiWebApp.server.Model.Category;
-import com.ivantiWebApp.server.Model.Package;
+import com.ivantiWebApp.server.Model.*;
 import com.ivantiWebApp.server.DTO.PackageDTO;
-import com.ivantiWebApp.server.Repository.CategoryRepository;
-import com.ivantiWebApp.server.Repository.PackageImplementation;
-import com.ivantiWebApp.server.Repository.PackageRepository;
+import com.ivantiWebApp.server.Model.Package;
+import com.ivantiWebApp.server.Repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -30,6 +28,10 @@ public class PackageController {
 
     private CategoryRepository categoryRepository;
     private PackageImplementation repoImplementation;
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     @CrossOrigin
     @GetMapping("/all")
@@ -107,5 +109,13 @@ public class PackageController {
 
         return ResponseEntity.ok().body(packageid);
     }
+
+    @CrossOrigin
+    @GetMapping("/byCreatorId")
+    public ResponseEntity<List<PackageDTO>> findPackageByID(Authentication authentication) {
+        List<PackageDTO> packageid= repo.getPackageByUser(authentication.getName());
+        return ResponseEntity.ok().body(packageid);
+    }
+
 
 }

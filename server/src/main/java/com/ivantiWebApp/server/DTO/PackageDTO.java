@@ -7,4 +7,5 @@ public interface PackageDTO {
     String getDescription();
     String getTitle();
     ContentCreator getContentCreator();
+    String getFileId();
 }
