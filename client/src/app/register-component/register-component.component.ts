@@ -14,7 +14,7 @@ export class RegisterComponentComponent implements OnInit {
   constructor(private httpService: HttpService) { }
   packages: Object;
   currentUser: any;
-  
+
   uploadForm: HTMLElement;
   uploadFormInput: HTMLElement;
   downloadFile: HTMLElement;
@@ -52,7 +52,7 @@ export class RegisterComponentComponent implements OnInit {
     req.open("POST", "http://localhost:8080/file/upload")
 
     req.onload = (function () {
-      this.fileid = req.responseText;      
+      this.fileid = req.responseText;
     }).bind(this)
 
     req.send(formData);
@@ -61,12 +61,14 @@ export class RegisterComponentComponent implements OnInit {
 
   onSubmit(): void {
     var title = ((document.getElementById("title") as HTMLInputElement).value);
-    var categories = ((document.getElementById("categories") as HTMLInputElement).value);
+    var os = ((document.getElementById("OS") as HTMLInputElement).value);
+    var description = ((document.getElementById("description") as HTMLInputElement).value);
+    var installDesc = ((document.getElementById("Installation") as HTMLInputElement).value);
+
     var fileid = null;
-    console.log(this.fileid);
       this.httpService.getUser()
       .subscribe(user => {
-  
+
         this.packages = {
           "category": {
             "id": "string",
@@ -78,10 +80,10 @@ export class RegisterComponentComponent implements OnInit {
             "profession": "profession"
           } ,
           "fileId": this.fileid,
-          "description": "description",
+          "description": description,
           "title": title,
-          "installDesc" : "installDesc",
-          "os" : "os"
+          "installDesc" : installDesc,
+          "os" : os
         };
         this.httpService.createPackage(this.packages);
       });
