@@ -10,4 +10,7 @@ public interface ContentCreatorRepository extends MongoRepository<ContentCreator
 
     @Query("{'user.id':'?0'}")
     ContentCreator getFullUser(String id);
+
+    @Query("{'user.email':'?0'}")
+    ContentCreator isCreator(String email);
 }

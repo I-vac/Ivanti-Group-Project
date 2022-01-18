@@ -56,6 +56,11 @@ export class HttpService {
       return this.http.get(this.API_URL + '/users/getFullUser', {headers});
   }
 
+  isContentCreator(){
+    let headers = this.prepareRequest(localStorage.getItem("token"));
+    return this.http.get(this.API_URL + '/content/isCreator', {headers});
+}
+
 
 
   searchBar(search) {

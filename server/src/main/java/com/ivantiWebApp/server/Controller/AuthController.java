@@ -53,6 +53,8 @@ public class AuthController {
     }
 
 
+
+
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody User user) {
         User userExists = userService.findUserByEmail(user.getEmail());

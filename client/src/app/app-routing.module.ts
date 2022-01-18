@@ -9,6 +9,8 @@ import { UploadDownloadComponent } from './upload-download/upload-download.compo
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 import { PackagePageComponent } from './package-page/package-page.component';
+import { LoadPageComponent } from './load-page/load-page.component';
+import { SecurityComponent } from './security/security.component';
 
 
 const routes: Routes = [
@@ -16,11 +18,13 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent},           // Add this
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
+  { path: 'loading', component: LoadPageComponent},
   { path: 'file', component: UploadDownloadComponent},
   { path: 'profile', component: ProfilePageComponent},
   { path: 'createPackage', component: RegisterComponentComponent},
   { path: 'packagepage', component: PackagePageComponent},
-  { path: 'packagepage/:id', component: PackagePageComponent}
+  { path: 'packagepage/:id', component: PackagePageComponent},
+  { path: 'sec', component: SecurityComponent}
 ];
 
 @NgModule({

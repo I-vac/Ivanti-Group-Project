@@ -24,6 +24,7 @@ import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
 import { SecurityComponent } from './security/security.component';
 import { PackagePageComponent } from './package-page/package-page.component';
+import { LoadPageComponent } from './load-page/load-page.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { PackagePageComponent } from './package-page/package-page.component';
     SecurityComponent,
     ProfilePageComponent,
     PackagePageComponent,
+    HomePageComponent,
+    LoadPageComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,7 @@ import { PackagePageComponent } from './package-page/package-page.component';
     MDBBootstrapModule.forRoot()
 
   ],
-  providers: [TranslationService],
+  providers: [TranslationService, SecurityComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

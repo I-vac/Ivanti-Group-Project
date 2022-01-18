@@ -2,6 +2,7 @@ import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpService } from '../http.service';
+import { SecurityComponent } from '../security/security.component';
 
 @Component({
   selector: 'app-profile-page',
@@ -11,9 +12,10 @@ import { HttpService } from '../http.service';
 export class ProfilePageComponent implements OnInit {
   
 
-  constructor(private _http: HttpService) { }
+  constructor(private _http: HttpService, private sec: SecurityComponent) { }
 
   currentUser: any;
+  isCreator: any;
 
   getCurrentUser() {
     this._http.getUser()
@@ -22,13 +24,20 @@ export class ProfilePageComponent implements OnInit {
     });
   }
 
+  checkCreator() {
+    this._http.isContentCreator()
+    .subscribe(data => {
+      this.isCreator = data;
+    });
+  }
+
   makeCreator() {
-    var company = ((document.getElementById("company") as HTMLInputElement).value);
-    var profession = ((document.getElementById("profession") as HTMLInputElement).value);
+    //var company = ((document.getElementById("company") as HTMLInputElement).value);
+    //var profession = ((document.getElementById("profession") as HTMLInputElement).value);
 
     const body = {
-      company: company,
-      profession: profession
+      company: "company",
+      profession: "profession"
     }
 
     this._http.makeCreator(body);
@@ -36,8 +45,10 @@ export class ProfilePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCurrentUser();
+    this.checkCreator();
+    //this.checkCreator();
     //this.makeNewCreator();
-    this.currentUser.first_name = "test";
+    //this.currentUser.first_name = "test";
   }
 
 }

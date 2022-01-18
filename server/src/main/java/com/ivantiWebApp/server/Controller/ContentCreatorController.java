@@ -19,6 +19,7 @@ public class ContentCreatorController {
     private ContentCreatorRepository repository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired ContentCreatorRepository contentCreatorRepository;
 
     @CrossOrigin
     @GetMapping("/creator")
@@ -34,5 +35,20 @@ public class ContentCreatorController {
         ContentCreator newAcc = new ContentCreator(currentUser, input.getCompany(), input.getProfession());
         repository.save(newAcc);
         return ResponseEntity.ok().body(input);
+    }
+
+    @CrossOrigin
+    @GetMapping("/isCreator")
+    public ResponseEntity<Boolean> isCreator(Authentication authentication) {
+        User currentUser = userRepository.getCurrentUserByEmail(authentication.getName());
+        ContentCreator getCreator = contentCreatorRepository.isCreator(currentUser.getEmail());
+        Boolean isCreator;
+        if (getCreator == null) {
+            isCreator = false;
+        } else {
+            isCreator = true;
+        }
+
+        return ResponseEntity.ok().body(isCreator);
     }
 }

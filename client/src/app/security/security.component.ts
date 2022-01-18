@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 import { JwtClientService } from '../jwt-client.service';
 
 @Component({
@@ -8,9 +9,10 @@ import { JwtClientService } from '../jwt-client.service';
 })
 export class SecurityComponent implements OnInit {
 
-  constructor(private service:JwtClientService) { }
+  constructor(private service:JwtClientService, private _http: HttpService) { }
 
   response: any;
+  isCreator: any;
 
   public getJwtToken(authRequest) {
     let response = this.service.generateToken(authRequest);
@@ -24,8 +26,16 @@ export class SecurityComponent implements OnInit {
     localStorage.setItem ('token', JwtToken);
   }
 
+  checkCreator() {
+    this._http.isContentCreator()
+    .subscribe(data => {
+      this.isCreator = data;
+    });
+  }
+
   ngOnInit(): void {
-    //this.getJwtToken(this.authRequest);
+    this.checkCreator();
+    //this.getJwtToken;;(this.authRequest);
   }
 
 }
