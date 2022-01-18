@@ -22,11 +22,13 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
+    @CrossOrigin
     @PostMapping("/upload")
     public ResponseEntity<?> upload(@RequestParam("file")MultipartFile file) throws IOException {
         return new ResponseEntity<>(fileService.addFile(file), HttpStatus.OK);
     }
 
+    @CrossOrigin
     @GetMapping("/download/{id}")
     public ResponseEntity<ByteArrayResource> download(@PathVariable String id) throws IOException {
         FileLoad fileLoad = fileService.downloadFile(id);

@@ -93,7 +93,8 @@ public class PackageController {
 
     @CrossOrigin
     @PostMapping("/create")
-    public ResponseEntity<Package> createPackage(@RequestBody Package packRB ) {
+    public ResponseEntity<Package> createPackage(@RequestBody Package packRB , Authentication authentication) {
+
         Package pack = packRB;
         repo.save(pack);
         return ResponseEntity.ok().body(pack);

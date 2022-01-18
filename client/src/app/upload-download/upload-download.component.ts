@@ -18,7 +18,6 @@ export class UploadDownloadComponent implements OnInit {
     this.uploadFormInput = <HTMLInputElement>document.querySelector("#fileUploadInput");
     this.downloadFile = <HTMLElement>document.querySelector("#downloadFileUrl");
     this.createEventListener();
-
   }
 
   uploadFile(file) {

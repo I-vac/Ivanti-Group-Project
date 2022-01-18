@@ -11,13 +11,19 @@ public class Package {
     private ContentCreator contentCreator;
     private String title;
     private String description;
+    private String fileId;
     private Category category;
+    private String installDesc;
+    private String os;
 
-    public Package(ContentCreator contentCreator, String title, String description, Category category) {
+    public Package(ContentCreator contentCreator, String title, String description, Category category, String fileId, String os, String installDesc) {
         this.contentCreator = contentCreator;
         this.title = title;
         this.description = description;
         this.category = category;
+        this.fileId = fileId;
+        this.installDesc = installDesc;
+        this.os = os;
     }
 
     public ContentCreator getContentCreator() {
@@ -48,4 +54,10 @@ public class Package {
     public Category getCategory(){return category;}
 
     public void setCategory(Category category){this.category = category;}
+
+    public String getFileLoad() {return fileId; }
+
+    public void setFileLoad(String fileId) {
+        this.fileId = fileId;
+    }
 }
