@@ -13,7 +13,7 @@
                       <p class="text-secondary mb-1" *ngIf="!isCreator">Normal User</p>
                       <p class="text-muted font-size-sm">{{currentUser.email}}</p>
                       <button class="btn btn-primary">Edit Profile</button>
-                      <button class="btn btn-outline-primary" (click)="makeCreator()">Upgrade</button>
+                      <button class="btn btn-outline-primary" onClick="window.location.reload();" [hidden]="isCreator" (click)="makeCreator()">Upgrade</button>
                     </div>
                   </div>
                 </div>
@@ -45,8 +45,8 @@
                   <div class="containerPP">
 
                     <div class="containerpp">
-                      <ul *ngIf="packages">
-                        <ul *ngFor="let search of packages">
+                      <ul class="packages row" *ngIf="packages">
+                        <li *ngFor="let search of packages" class="col-6">
                           <div class="card" [routerLink]="['/packagepage',search.id]">
                             <div class="card-header">
                               <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="rover" />
@@ -62,7 +62,7 @@
                               </div>
                             </div>
                           </div>
-                        </ul>
+                        </li>
                       </ul>
                     </div>
                 

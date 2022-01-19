@@ -14,10 +14,10 @@ export class HttpService {
   currentUser: any;
 
   isloggedIn(){
-    if(localStorage.length == 0) {
-      return false
+    if(localStorage.getItem('token')!== null) {
+      return true
     } else{
-      return true;
+      return false;
     }
   }
 

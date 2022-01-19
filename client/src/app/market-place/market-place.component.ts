@@ -110,6 +110,7 @@ export class MarketPlaceComponent implements OnInit {
       this.packages = data
       console.log(this.packages);
   });
+
 }
 
 viewPackage(userId:any) {

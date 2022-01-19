@@ -34,7 +34,9 @@ export class LoginComponent implements OnInit {
     }
 
     this.service.getJwtToken(authBody);
-    this.router.navigateByUrl("/loading");
+    this.router.navigateByUrl('/loading', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['market']);
+  }); 
   }
 
   ngOnInit(): void {
