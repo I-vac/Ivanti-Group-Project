@@ -4,9 +4,6 @@
     </noscript>
 
         <form class="registerForm" >
-            <div class="alert alert-danger" role="alert">
-                This is a danger alert—check it out!
-              </div>
             <h2 >Create a new package </h2>
             <div class="subForm">
                 <div class="leftGrid">
@@ -24,13 +21,16 @@
                         <label >Categories*</label>
                         <input id="categories" type="text"  name="category" required>
                     </div>
+                    <!-- <select name="selectCategory" #packageByCategory>
+                        <option *ngFor="let category of convertToJSON(category)" >{{category | json}}</option>
+                    </select> -->
 
                     <div class="controls full">
-                        <label >Package Description</label>
+                        <label >Package  Description</label>
                         <textarea id="description" required> </textarea >
                     </div>
-                 
-                    
+
+
           <!-- <label>Categories</label>
           <select name="selectCategory" #packageByCategory (selectionChange)="showPackageByCategory($event.value)">
               <span *ngIf="categories.value?.length > 1" style="opacity: 0.75;font-size: 0.75em;">
@@ -38,7 +38,7 @@
               </span>
             <option *ngFor="let category of convertToJSON(category)" [value]="category">{{category}}</option>
           </select> -->
-            
+
 
                 </div>
                 <div class="rightGrid">

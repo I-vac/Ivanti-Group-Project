@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
+import { Router } from '@angular/router';
 import {FormControl, Validators} from '@angular/forms';
 import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
@@ -9,27 +10,27 @@ import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
   styleUrls: ['./register-component.component.scss']
 })
 export class RegisterComponentComponent implements OnInit {
-  animalControl = new FormControl('', Validators.required);
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService, private router: Router) { }
   packages: Object;
   currentUser: any;
+  category:any;
 
   uploadForm: HTMLElement;
   uploadFormInput: HTMLElement;
   downloadFile: HTMLElement;
   fileid: any;
+  success : false;
 
   ngOnInit(): void {
     this.uploadForm = <HTMLElement>document.querySelector("#fileUploadForm");
     this.uploadFormInput = <HTMLInputElement>document.querySelector("#fileUploadInput");
     this.downloadFile = <HTMLElement>document.querySelector("#downloadFileUrl");
+    this.showCategory()
   }
 
   createEventListener() {
-    console.log("worked");
     document.getElementById("uploadButton").addEventListener('click', (function () {
-      console.log("worked")
 
       const files = this.uploadFormInput.files;
       console.log("work");
@@ -43,6 +44,10 @@ export class RegisterComponentComponent implements OnInit {
     }).bind(this), true);
 
   }
+
+  showCategory() {
+
+}
 
   uploadFile(file) {
     let formData = new FormData();
@@ -86,6 +91,7 @@ export class RegisterComponentComponent implements OnInit {
           "os" : os
         };
         this.httpService.createPackage(this.packages);
+        this.router.navigateByUrl("/profile");
       });
   }
 

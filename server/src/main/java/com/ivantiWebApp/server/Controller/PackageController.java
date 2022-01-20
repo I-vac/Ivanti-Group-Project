@@ -63,9 +63,8 @@ public class PackageController {
     @GetMapping("/byuser")
     public ResponseEntity<List<PackageDTO>> findPackageByUser() {
         List<PackageDTO> packages = repoImplementation.findByUser();
-
         return ResponseEntity.ok().body(packages);
-    }
+      }
 
     @CrossOrigin
     @GetMapping("/bycategory")

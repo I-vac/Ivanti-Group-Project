@@ -15,7 +15,6 @@ describe('RegisterComponentComponent', () => {
       declarations: [ RegisterComponentComponent ],
       imports: [HttpClientTestingModule, RouterTestingModule],
       providers: [RouterTestingModule, HttpService]
-      
     })
     .compileComponents();
   });
