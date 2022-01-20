@@ -18,7 +18,7 @@ export class TranslationService {
             languange: 'ger',
             values: {
                 'example' : 'Beispiel',
-                'marketplace' : 'Marketplace',
+                'marketplace' : 'Marketplatz',
                 'list' : 'Aufführen' ,
                 'register' : 'Registrieren',
                 'login' : 'Anmeldung',

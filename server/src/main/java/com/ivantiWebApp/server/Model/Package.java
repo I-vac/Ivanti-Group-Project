@@ -3,6 +3,8 @@ package com.ivantiWebApp.server.Model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.*;
+
 @Document
 public class Package {
 
@@ -15,14 +17,41 @@ public class Package {
     private Category category;
     private String installDesc;
     private String os;
+    private Date dateCreated;
 
-    public Package(ContentCreator contentCreator, String title, String description, Category category, String fileId, String os, String installDesc) {
+    public Package(ContentCreator contentCreator, String title, String description, Category category, String fileId, String os, String installDesc, Date dateCreated) {
         this.contentCreator = contentCreator;
         this.title = title;
         this.description = description;
         this.category = category;
         this.fileId = fileId;
         this.installDesc = installDesc;
+        this.os = os;
+        this.dateCreated = dateCreated;
+
+    }
+
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public String getInstallDesc() {
+        return installDesc;
+    }
+
+    public void setInstallDesc(String installDesc) {
+        this.installDesc = installDesc;
+    }
+
+    public String getOs() {
+        return os;
+    }
+
+    public void setOs(String os) {
         this.os = os;
     }
 

@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
     }
 
     this._http.registerUser(body);
-
+    alert("Account Created!");
     this.router.navigateByUrl("/login");
 
   }
