@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="787919ac-c328-4e75-ae0b-fd362c12a3ba" name="Changes" comment="download page,package page and profile page improvements">
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/ivantiWebApp/server/Repository/PackageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/ivantiWebApp/server/Repository/PackageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/com/ivantiWebApp/server/PackagesControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/com/ivantiWebApp/server/PackagesControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -35,7 +35,7 @@ public class PackagesControllerTests {
     public void PackageCreation() throws Exception {
         ContentCreator contentCreator = new ContentCreator(null,null,null);
         Category category = new Category(null,null);
-        Package pack = new Package(contentCreator,"title","Description",category,"FileId","OS","Installdesc");
+        Package pack = new Package(contentCreator,"title","Description",category,"FileId","OS","Installdesc",null);
         ObjectWriter pack0 = new ObjectMapper().writer().withDefaultPrettyPrinter();
         String content = pack0.writeValueAsString(pack);
 
