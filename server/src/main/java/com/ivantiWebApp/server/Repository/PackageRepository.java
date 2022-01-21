@@ -28,6 +28,8 @@ public interface PackageRepository extends MongoRepository<Package, String> {
     @Query("{'contentCreator.user.email':'?0'}")
     List<PackageDTO> getPackageByUser(String email);
 
+    @Query(value = "{}", sort = "{ createDate : -1 }")
+    List<PackageDTO> sortPackageByDate();
 
 //    @Query(value = "Select package")
 //    List<PackageDTO> getPackageperu(String)

@@ -21,6 +21,7 @@ export class RegisterComponentComponent implements OnInit {
   downloadFile: HTMLElement;
   fileid: any;
   success : false;
+  currentDate : Date;
 
   ngOnInit(): void {
     this.uploadForm = <HTMLElement>document.querySelector("#fileUploadForm");
@@ -88,7 +89,8 @@ export class RegisterComponentComponent implements OnInit {
           "description": description,
           "title": title,
           "installDesc" : installDesc,
-          "os" : os
+          "os" : os,
+          "dateCreated" : this.currentDate = new Date()
         };
         this.httpService.createPackage(this.packages);
         this.router.navigateByUrl("/profile");

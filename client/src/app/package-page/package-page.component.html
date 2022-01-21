@@ -9,7 +9,7 @@
         </div>
      
          <div class="os">
-            OS: Windows
+            OS: {{packageInfo.os}}
         </div>
     </div>
 
@@ -29,4 +29,9 @@
          <button (click)="DownloadFile()">Download</button>
         </div>
     </div>
+
+    <div class="installation">
+        <hr class="divider"/>
+        <p> {{packageInfo.installDesc}}</p>
+     </div>
   </div>

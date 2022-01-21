@@ -1,12 +1,13 @@
 .container {
     display: grid;
     grid-template-columns: 240px 500px 150px;
-    grid-template-rows: 90px 200px;
+    grid-template-rows: 90px 200px 200px;
     gap: 10px 20px;
     grid-auto-flow: row;
     grid-template-areas:
       "image title buttons"
-      "image description buttons";
+      "image description buttons"
+      ". installation .";
     padding-top: 60px;
   }
 
@@ -47,6 +48,9 @@
   }
 
   .buttons { grid-area: buttons; }
+
+
+  .installation {grid-area: installation;}
 
 
 hr.divider {
