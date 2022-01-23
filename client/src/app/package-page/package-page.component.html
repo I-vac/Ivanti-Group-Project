@@ -1,32 +1,41 @@
  <div class="container">
     <div class="title">
-        <div class="name" > 
+        <div class="name" >
             {{packageInfo.title}}
         </div>
 
         <div class="author">
-          Author: {{packageInfo.contentCreator.user.first_name}} {{packageInfo.contentCreator.user.last_name}}
+          Author : {{packageInfo.contentCreator.user.first_name}} {{packageInfo.contentCreator.user.last_name}}
         </div>
-     
+
          <div class="os">
-            OS: {{packageInfo.os}}
+            OS : {{packageInfo.os}}
         </div>
+
+        <div class="category">
+          Category : {{packageInfo.category.name}}
+        </div>
+
+        <div class="created">
+          Creation date : {{packageInfo.contentCreator.user.createdAt}}
+        </div>
+
     </div>
 
     <div class="image">
         <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/4a/fa/e0/4afae0c6-9793-309d-ef98-fdee220b3e3f/source/512x512bb.jpg" alt="rover" />
     </div>
-    
+
     <div class="description">
        <hr class="divider"/>
        <p> {{packageInfo.description}}</p>
     </div>
 
     <div class="buttons">
-        
+
         <div class="file-download">
             <div id="downloadFileUrl"></div>
-         <button (click)="DownloadFile()">Download</button>
+         <button mdbBtn type="button" gradient="peach" rounded="true" mdbWavesEffect (click)="DownloadFile()">Download</button>
         </div>
     </div>
 
