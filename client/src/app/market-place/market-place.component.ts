@@ -15,10 +15,16 @@ export class MarketPlaceComponent implements OnInit {
 
   packages: Object;
   search: Object;
-  //search: Object[];
   category: Object;
   packagebycategory: Object;
   categories = new FormControl();
+  slides = [
+        {'image': 'https://itsocial.fr/wp-content/uploads/2022/01/IND_0821_PU_1.jpg'},
+        {'image': 'https://www.ionos.fr/digitalguide/fileadmin/DigitalGuide/Teaser/web-apps-t.jpg'},
+        {'image': 'https://www.centralconsultinggroup.com/wp-content/uploads/2020/08/The-Top-10-Benefits-of-Having-an-ERP-System.jpg'},
+        {'image': 'https://freerangestock.com/sample/120576/overhead-view-of-hands-typing-on-laptop.jpg'},
+        {'image': 'https://www.mobileapps.com/wp-content/uploads/2020/05/Image-60.jpg'}
+      ];
 
   id: string;
   constructor(private _http: HttpService, private router: Router) { }
@@ -30,16 +36,11 @@ export class MarketPlaceComponent implements OnInit {
   showSearch(search) {
     this._http.searchBar(search).subscribe(data => {
       this.search = data;
-    //  console.log(this.search);
     })
   }
 
   sortClick(){
-    //console.log(this.search)
-    //var a =this.search[0].items.sort((a,b) => a.title > b.title ? 1 : -1)
-    //console.log(a)
-    //const Response = JSON.parse(this.search)
-    //var a =this.Response.sort((a,b) => a.title > b.title ? 1 : -1)
+
     let x = JSON.parse(this.search.toString())
     const sortedArray = this.sortArrayOfObjects(x, "title", "ascending")
     console.log(sortedArray)
